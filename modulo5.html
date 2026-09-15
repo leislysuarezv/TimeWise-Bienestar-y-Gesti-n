@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 5: Hábitos | TimeWise</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="logo">
+            🌿 TimeWise <span class="badge-bienestar" data-es="Módulo 5" data-en="Module 5">Módulo 5</span>
+        </div>
+        
+        <button class="btn-hamburguesa" onclick="alternarMenuMovil()" aria-label="Abrir menú">☰</button>
+
+        <nav class="navegacion" id="menu-navegacion">
+            <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+            
+            <div class="menu-desplegable">
+                <span class="enlace-desplegable" data-es="Módulos ▾" data-en="Modules ▾">Módulos ▾</span>
+                <div class="contenido-desplegable">
+                    <a href="modulo1.html" data-es="Módulo 1: Fundamentos" data-en="Module 1: Fundamentals">Módulo 1: Fundamentos</a>
+                    <a href="modulo2.html" data-es="Módulo 2: Técnicas" data-en="Module 2: Techniques">Module 2: Techniques</a>
+                    <a href="modulo3.html" data-es="Módulo 3: Herramientas" data-en="Module 3: Tools">Module 3: Tools</a>
+                    <a href="modulo4.html" data-es="Módulo 4: Bienestar" data-en="Module 4: Wellness">Module 4: Wellness</a>
+                    <a href="modulo5.html" data-es="Módulo 5: Hábitos" data-en="Module 5: Habits">Module 5: Habits</a>
+                </div>
+            </div>
+
+            <a href="rutina.html" data-es="Planificador" data-en="Planner">Planner</a>
+            <a href="creditos.html" data-es="Créditos" data-en="Credits">Créditos</a>
+        </nav>
+
+        <div class="selector-idioma">
+            <button onclick="cambiarIdioma('es')">ES</button>
+            <button onclick="cambiarIdioma('en')">EN</button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL CON DISEÑO DE DOS COLUMNAS -->
+    <main class="contenedor-principal" style="display: grid; grid-template-columns: 260px 1fr; gap: 30px; align-items: start;">
+        
+        <!-- BARRA LATERAL / ÍNDICE DEL MÓDULO -->
+        <aside style="background: white; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; position: sticky; top: 90px;">
+            <h4 style="color: #2f855a; margin-top: 0; margin-bottom: 15px; font-size: 16px; border-bottom: 2px solid #e6fffa; padding-bottom: 8px;" data-es="Contenido Módulo 5" data-en="Module 5 Contents">Contenido Módulo 5</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px;">
+                <li style="margin-bottom: 12px;"><a href="#subtema1" style="color: #4a5568; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #f8fafc;" data-es="5.1 Creación de Hábitos" data-en="5.1 Habit Building">📌 5.1 Creación de Hábitos</a></li>
+                <li style="margin-bottom: 12px;"><a href="#subtema2" style="color: #4a5568; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #f8fafc;" data-es="5.2 Consistencia" data-en="5.2 Consistency">🚀 5.2 Consistencia a Largo Plazo</a></li>
+                <li><a href="#quiz-seccion" style="color: #4a5568; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #f8fafc;" data-es="📝 Quiz del Módulo" data-en="📝 Module Quiz">📝 Quiz de Autoevaluación</a></li>
+            </ul>
+        </aside>
+
+        <!-- SECCIÓN CENTRAL DE CONTENIDOS -->
+        <div>
+            <!-- ENLACE DE RETORNO AL INICIO -->
+            <div style="margin-bottom: 20px;">
+                <a href="index.html" style="color: #2f855a; text-decoration: none; font-weight: 600; font-size: 14px;" data-es="← Volver al inicio" data-en="← Back to home">← Volver al inicio</a>
+            </div>
+
+            <!-- SUBTEMA 5.1 CON TARJETAS INTERACTIVAS -->
+            <section id="subtema1" class="tarjeta-modulo" style="margin-bottom: 30px; border-left: 5px solid #2f855a;">
+                <div style="margin-bottom: 15px;">
+                    <span style="background: #e6fffa; color: #2c7a7b; font-size: 12px; padding: 6px 14px; border-radius: 20px; font-weight: 600; display: inline-block;" data-es="Lección 5.1" data-en="Subtopic 5.1">Bloque 5.1</span>
+                </div>
+                
+                <h1 style="font-size: 24px; color: #1a202c; margin-top: 5px; margin-bottom: 10px;" 
+                    data-es="Construcción de hábitos sostenibles de estudio" 
+                    data-en="Building sustainable study habits">
+                    Construcción de hábitos sostenibles de estudio
+                </h1>
+
+                <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;" 
+                   data-es="Haz clic en cada tarjeta para descubrir cómo diseñar rutinas académicas que perduren en el tiempo. Esta sección te enseña a integrar el estudio diario de forma natural sin sobrecargar tu jornada laboral o personal." 
+                   data-en="Click on each card to discover how to design academic routines that last over time. This section teaches you to integrate daily study naturally without overloading your work or personal day.">
+                   Haz clic en cada tarjeta para descubrir cómo diseñar rutinas académicas que perduren en el tiempo. Esta sección te enseña a integrar el estudio diario de forma natural sin sobrecargar tu jornada laboral o personal.
+                </p>
+
+                <!-- IMAGEN ILUSTRATIVA SUBTEMA 5.1 -->
+                <div style="margin-bottom: 25px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80" alt="Construcción de hábitos de estudio sostenibles" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                </div>
+
+                <!-- CONTENEDOR DE TARJETAS INTERACTIVAS SUBTEMA 5.1 -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                    
+                    <div onclick="desplegarDetalle('detalleMod5_1')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="🔗 Apilamiento de Hábitos" data-en="🔗 Habit Stacking">🔗 Apilamiento de Hábitos</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Conecta un nuevo hábito de estudio con una rutina diaria existente." data-en="Connect a new study habit with an existing daily routine.">Conecta un nuevo hábito de estudio con una rutina diaria existente.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod5_1" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Ejemplo):" data-en="💡 Learn more (Example):">💡 Saber más (Ejemplo):</strong> 
+                            <span data-es="'Inmediatamente después de llegar del trabajo y alistar mis cosas, abriré mi espacio de trabajo para dedicar 30 minutos a la universidad'." data-en="'Right after getting home from work and unpacking, I will open my workspace to dedicate 30 minutes to university.'">'Inmediatamente después de llegar del trabajo y alistar mis cosas, abriré mi espacio de trabajo para dedicar 30 minutos a la universidad'.</span>
+                        </div>
+                    </div>
+
+                    <div onclick="desplegarDetalle('detalleMod5_2')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="🌱 La Regla de los 2 Minutos" data-en="🌱 The 2-Minute Rule">🌱 La Regla de los 2 Minutos</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Reduce la resistencia inicial haciendo que las tareas comiencen de forma muy sencilla." data-en="Reduce initial resistance by making tasks start very simply.">Reduce la resistencia inicial haciendo que las tareas comiencen de forma muy sencilla.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod5_2" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Clave):" data-en="💡 Learn more (Key):">💡 Saber más (Clave):</strong> 
+                            <span data-es="Si te cuesta empezar un proyecto, comprométete solo a abrir el archivo y trabajar dos minutos; el impulso hará el resto." data-en="If you struggle to start a project, commit only to opening the file and working for two minutes; momentum will do the rest.">Si te cuesta empezar un proyecto, comprométete solo a abrir el archivo y trabajar dos minutos; el impulso hará el resto.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SUBTEMA 5.2 CON TARJETAS INTERACTIVAS -->
+            <section id="subtema2" class="tarjeta-modulo" style="margin-bottom: 30px; border-left: 5px solid #319795;">
+                <div style="margin-bottom: 15px;">
+                    <span style="background: #e6fffa; color: #2c7a7b; font-size: 12px; padding: 6px 14px; border-radius: 20px; font-weight: 600; display: inline-block;" data-es="Lección 5.2" data-en="Subtopic 5.2">Bloque 5.2</span>
+                </div>
+                
+                <h2 style="font-size: 24px; color: #1a202c; margin-top: 5px; margin-bottom: 10px;" 
+                    data-es="Consistencia y adaptabilidad a largo plazo" 
+                    data-en="Long-term consistency and adaptability">
+                    Consistencia y adaptabilidad a largo plazo
+                </h2>
+
+                <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;" 
+                   data-es="Haz clic en cada tarjeta para aprender cómo mantener el rumbo frente a imprevistos y cambios semestrales. Descubre cómo ajustar tu planeación sin abandonar tus metas académicas." 
+                   data-en="Click on each card to learn how to stay on track despite unexpected events and semester changes. Discover how to adjust your planning without abandoning your academic goals.">
+                   Haz clic en cada tarjeta para aprender cómo mantener el rumbo frente a imprevistos y cambios semestrales. Descubre cómo ajustar tu planeación sin abandonar tus metas académicas.
+                </p>
+
+                <!-- IMAGEN ILUSTRATIVA SUBTEMA 5.2 -->
+                <div style="margin-bottom: 25px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Consistencia y metas a largo plazo" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                </div>
+
+                <!-- CONTENEDOR DE TARJETAS INTERACTIVAS SUBTEMA 5.2 -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                    
+                    <div onclick="desplegarDetalle('detalleMod5_3')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="🔄 Flexibilidad Planificada" data-en="🔄 Planned Flexibility">🔄 Flexibilidad Planificada</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Ajusta tu rutina semanal cuando surjan imprevistos laborales o familiares." data-en="Adjust your weekly routine when work or family emergencies arise.">Ajusta tu rutina semanal cuando surjan imprevistos laborales o familiares.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod5_3" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Acción):" data-en="💡 Learn more (Action):">💡 Saber más (Acción):</strong> 
+                            <span data-es="No abandones todo tu sistema por un día difícil; reorganiza las tareas pendientes para el fin de semana de forma estratégica." data-en="Don't abandon your entire system for a difficult day; strategically reschedule pending tasks for the weekend.">No abandones todo tu sistema por un día difícil; reorganiza las tareas pendientes para el fin de semana de forma estratégica.</span>
+                        </div>
+                    </div>
+
+                    <div onclick="desplegarDetalle('detalleMod5_4')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="📊 Revisión Semanal" data-en="📊 Weekly Review">📊 Revisión Semanal</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Evalúa qué funcionó y qué debes corregir en tu planeación cada domingo." data-en="Evaluate what worked and what you need to fix in your planning every Sunday.">Evalúa qué funcionó y qué debes corregir en tu planeación cada domingo.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod5_4" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Acción):" data-en="💡 Learn more (Action):">💡 Saber más (Acción):</strong> 
+                            <span data-es="Dedica 15 minutos semanales a auditar tus avances para llegar al siguiente semestre con mayor control y eficiencia." data-en="Dedicate 15 minutes weekly to audit your progress to reach the next semester with greater control and efficiency.">Dedica 15 minutos semanales a auditar tus avances para llegar al siguiente semestre con mayor control y eficiencia.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SECCIÓN DEL QUIZ INTERACTIVO -->
+            <section id="quiz-seccion" class="tarjeta-modulo" style="background: #f8fafc; border: 2px dashed #2f855a; padding: 25px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <span style="background: #2f855a; color: white; font-size: 12px; padding: 4px 10px; border-radius: 6px; font-weight: 600;" data-es="📝 Quiz interactivo" data-en="Assessment">📝 Quiz interactivo</span>
+                    <span style="color: #718096; font-size: 13px;" data-es="Comprueba lo aprendido" data-en="Test your knowledge">Comprueba lo aprendido</span>
+                </div>
+
+                <h2 style="font-size: 20px; color: #1a202c; margin-top: 0;" data-es="Quiz de Autoevaluación: Módulo 5" data-en="Self-Assessment Quiz: Module 5">
+                    Quiz de Autoevaluación: Módulo 5
+                </h2>
+                <p style="color: #4a5568; font-size: 14px; margin-bottom: 20px;" data-es="Responde las siguientes preguntas para validar tu comprensión sobre la creación y mantenimiento de hábitos:" data-en="Answer the following questions to validate your understanding of habit creation and maintenance:">
+                    Responde las siguientes preguntas para validar tu comprensión sobre la creación y mantenimiento de hábitos:
+                </p>
+
+                <!-- Pregunta 1 -->
+                <div style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 15px;">
+                    <p style="font-weight: 600; color: #2d3748; margin-top: 0;" data-es="1. ¿En qué consiste la técnica de 'Apilamiento de Hábitos'?" data-en="1. What does 'Habit Stacking' consist of?">
+                        1. ¿En qué consiste la técnica de 'Apilamiento de Hábitos'?
+                    </p>
+                    <label style="display: block; margin-bottom: 8px; font-size: 14px; color: #4a5568; cursor: pointer;">
+                        <input type="radio" name="p1" value="incorrecta"> <span data-es="a) Hacer muchas tareas al mismo tiempo sin descansar." data-en="a) Doing many tasks at the same time without resting.">a) Hacer muchas tareas al mismo tiempo sin descansar.</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 8px; font-size: 14px; color: #4a5568; cursor: pointer;">
+                        <input type="radio" name="p1" value="correcta"> <span data-es="b) Conectar un nuevo hábito de estudio con una rutina diaria ya existente." data-en="b) Connecting a new study habit with an existing daily routine.">b) Conectar un nuevo hábito de estudio con una rutina diaria ya existente.</span>
+                    </label>
+                    <label style="display: block; font-size: 14px; color: #4a5568; cursor: pointer;">
+                        <input type="radio" name="p1" value="incorrecta"> <span data-es="c) Apilar libros de la universidad en orden de prioridad." data-en="c) Stacking university books in order of priority.">c) Apilar libros de la universidad en orden de prioridad.</span>
+                    </label>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 20px;">
+                    <p style="font-weight: 600; color: #2d3748; margin-top: 0;" data-es="2. ¿Cuál es el objetivo principal de 'La Regla de los 2 Minutos'?" data-en="2. What is the main objective of 'The 2-Minute Rule'?">
+                        2. ¿Cuál es el objetivo principal de 'La Regla de los 2 Minutos'?
+                    </p>
+                    <label style="display: block; margin-bottom: 8px; font-size: 14px; color: #4a5568; cursor: pointer;">
+                        <input type="radio" name="p2" value="correcta"> <span data-es="a) Reducir la resistencia inicial haciendo que las tareas comiencen de forma muy sencilla." data-en="a) Reduce initial resistance by making tasks start very simply.">a) Reducir la resistencia inicial haciendo que las tareas comiencen de forma muy sencilla.</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 8px; font-size: 14px; color: #4a5568; cursor: pointer;">
+                        <input type="radio" name="p2" value="incorrecta"> <span data-es="b) Terminar toda una materia universitaria en solo dos minutos." data-en="b) Finish an entire university subject in just two minutes.">b) Terminar toda una materia universitaria en solo dos minutos.</span>
+                    </label>
+                    <label style="display: block; font-size: 14px; color: #4a5568; cursor: pointer;">
+                        <input type="radio" name="p2" value="incorrecta"> <span data-es="c) Tomar descansos obligatorios cada dos minutos exactos." data-en="c) Take mandatory breaks every two exact minutes.">c) Tomar descansos obligatorios cada dos minutos exactos.</span>
+                    </label>
+                </div>
+
+                <button onclick="calificarQuiz()" style="background: #2f855a; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; cursor: pointer;" data-es="Calificar Respuestas" data-en="Submit Answers">
+                    Calificar Respuestas
+                </button>
+
+                <div id="resultado-quiz" style="margin-top: 15px; font-weight: 600; font-size: 15px; display: none;"></div>
+            </section>
+
+            <!-- NAVEGACIÓN INFERIOR -->
+            <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <a href="modulo4.html" class="btn-principal" data-es="← Módulo 4" data-en="← Module 4">← Módulo 4</a>
+                <a href="rutina.html" class="btn-principal" data-es="Planificador →" data-en="Planner →">Planificador →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p data-es="Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia" data-en="National Open and Distance University - UNAD | Multimedia Engineering">
+            Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia
+        </p>
+    </footer>
+
+    <!-- SCRIPT DE INTERACTIVIDAD Y QUIZ -->
+    <script>
+        function desplegarDetalle(id) {
+            const elemento = document.getElementById(id);
+            if (!elemento) return;
+            if (elemento.style.display === "none" || elemento.style.display === "") {
+                elemento.style.display = "block";
+            } else {
+                elemento.style.display = "none";
+            }
+        }
+
+        function calificarQuiz() {
+            let aciertos = 0;
+            const p1Seleccionada = document.querySelector('input[name="p1"]:checked');
+            const p2Seleccionada = document.querySelector('input[name="p2"]:checked');
+            const contenedorResultado = document.getElementById('resultado-quiz');
+            const idiomaActual = localStorage.getItem('idiomaTimeWise') || 'es';
+
+            if (!p1Seleccionada || !p2Seleccionada) {
+                contenedorResultado.style.display = "block";
+                contenedorResultado.style.color = "#c53030";
+                contenedorResultado.innerText = idiomaActual === 'en' 
+                    ? "⚠️ Please answer all questions before submitting." 
+                    : "⚠️ Por favor, responde todas las preguntas antes de calificar.";
+                return;
+            }
+
+            if (p1Seleccionada.value === "correcta") aciertos++;
+            if (p2Seleccionada.value === "correcta") aciertos++;
+
+            contenedorResultado.style.display = "block";
+            if (aciertos === 2) {
+                contenedorResultado.style.color = "#2f855a";
+                contenedorResultado.innerText = idiomaActual === 'en'
+                    ? "🎉 Excellent job! You got 2/2 correct. You have mastered the module's concepts."
+                    : "🎉 ¡Excelente trabajo! Obtuviste 2/2 aciertos. Has dominado los conceptos del módulo.";
+            } else {
+                contenedorResultado.style.color = "#dd6b20";
+                contenedorResultado.innerText = idiomaActual === 'en'
+                    ? `👍 You got ${aciertos}/2 correct. Review the module's concepts and try again.`
+                    : `👍 Obtuviste ${aciertos}/2 aciertos. Revisa los conceptos del módulo y vuelve a intentarlo.`;
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

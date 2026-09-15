@@ -1,0 +1,527 @@
+/* =========================================================
+   CONFIGURACIÓN GENERAL Y RESET
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #f4f8f6;
+    color: #2d3748;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================================= */
+.encabezado, header {
+    background-color: #ffffff;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #2f855a;
+    box-shadow: 0 2px 8px rgba(47, 133, 90, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    width: 100%;
+}
+
+.logo {
+    font-size: 24px; /* Aumenta el tamaño del texto principal del logo (puedes probar con 26px o 28px) */
+    font-weight: bold;
+    color: #2f855a;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el icono y el texto */
+}
+
+.badge-bienestar {
+    background-color: #e6fffa;
+    color: #234e52;
+    font-size: 10px;
+    padding: 3px 6px;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid #b2f5ea;
+}
+
+.navegacion {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.navegacion a:hover {
+    color: #2f855a;
+}
+
+.btn-hamburguesa {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #2f855a;
+}
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL (ESTRUCTURA DE DOS COLUMNAS UNIFICADA)
+   ========================================================= */
+.contenedor-principal, .main-content, .lesson-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 30px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* =========================================================
+   ASIDE / MENÚ LATERAL DE SUBTEMAS
+   ========================================================= */
+aside {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #38a169;
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    top: 90px;
+}
+
+.lista-subtemas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+}
+
+aside li, 
+aside a, 
+aside div, 
+.lista-subtemas li, 
+.lista-subtemas a {
+    transition: all 0.25s ease !important;
+    text-decoration: none;
+}
+
+aside li:hover, 
+.lista-subtemas li:hover {
+    transform: translateX(6px) !important;
+    background-color: #e6fffa !important;
+    border-radius: 6px;
+    padding-left: 10px;
+}
+
+aside li:hover a,
+.lista-subtemas li:hover a,
+.lista-subtemas a:hover {
+    color: #2f855a !important;
+    font-weight: 600;
+}
+
+.lista-subtemas span {
+    font-weight: 700;
+    color: #38a169;
+    transition: color 0.25s ease;
+}
+
+.lista-subtemas li:hover span {
+    color: #276749 !important;
+}
+
+/* =========================================================
+   SECCIONES Y TARJETAS DE CONTENIDO
+   ========================================================= */
+.seccion-hero {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.etiqueta-hero {
+    display: inline-block;
+    background-color: #e6fffa;
+    color: #234e52;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 16px;
+    border: 1px solid #b2f5ea;
+}
+
+.seccion-hero h1 {
+    font-size: 36px;
+    color: #1a202c;
+    margin-bottom: 16px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.seccion-hero p {
+    font-size: 18px;
+    color: #4a5568;
+    max-width: 800px;
+    margin: 0 auto 24px;
+    line-height: 1.7;
+}
+
+.botones-hero {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.btn-principal, .btn-secundario {
+    text-decoration: none;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-principal {
+    background-color: #2f855a;
+    color: white;
+    box-shadow: 0 4px 12px rgba(47, 133, 90, 0.25);
+}
+
+.btn-principal:hover {
+    background-color: #276749;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    background-color: white;
+    color: #2f855a;
+    border: 2px solid #2f855a;
+}
+
+.btn-secundario:hover {
+    background-color: #f0fff4;
+    transform: translateY(-2px);
+}
+
+.grid-modulos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tarjeta-modulo {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #38a169;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tarjeta-modulo:hover {
+    border-color: #319795;
+    background-color: #f0fff4;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(47, 133, 90, 0.12);
+}
+
+.icono {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-modulo h3 {
+    font-size: 17px;
+    color: #2d3748;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.tarjeta-modulo:hover h3 {
+    color: #2f855a;
+}
+
+.seccion-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border-top: 4px solid #2f855a;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.grid-leccion, .grid-interactivo, .tarjetas-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   ELEMENTOS ADICIONALES (MIGAS DE PAN, MENÚS, FORMULARIOS)
+   ========================================================= */
+.migas-pan {
+    margin-bottom: 16px;
+}
+
+.migas-pan a {
+    text-decoration: none !important;
+    color: #2f855a;
+    font-weight: 600;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.migas-pan a:hover {
+    color: #276749;
+    text-decoration: underline !important;
+}
+
+.menu-desplegable {
+    position: relative;
+    display: inline-block;
+}
+
+.contenido-desplegable {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 100;
+    top: 100%;
+    left: 0;
+    padding: 8px 0;
+    border-top: 3px solid #2f855a;
+}
+
+.contenido-desplegable a {
+    color: #2d3748 !important;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.contenido-desplegable a:hover {
+    background-color: #f0fff4 !important;
+    color: #2f855a !important;
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+.menu-desplegable:hover .contenido-desplegable {
+    display: block;
+}
+
+.selector-idioma {
+    display: flex;
+    gap: 6px;
+}
+
+.selector-idioma button {
+    padding: 5px 10px;
+    border: 2px solid #2f855a;
+    border-radius: 20px;
+    background: white;
+    color: #2f855a;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.selector-idioma button:hover {
+    background: #2f855a;
+    color: white;
+}
+
+/* =========================================================
+   PIE DE PÁGINA
+   ========================================================= */
+footer {
+    background-color: #1a202c;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    font-size: 12px;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   DISEÑO RESPONSIVO ESTRICTO PARA MÓVILES / TABLETS (< 900px)
+   ========================================================= */
+@media (max-width: 900px) {
+    .btn-hamburguesa {
+        display: block;
+    }
+
+    .navegacion {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        padding: 20px;
+        box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+        border-bottom: 3px solid #2f855a;
+        z-index: 1000;
+    }
+
+    .navegacion.activo {
+        display: flex !important;
+    }
+
+    /* Romper contenedor grid principal a una sola columna */
+    .contenedor-principal, .main-content, .lesson-container {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        padding: 10px !important;
+        margin: 15px auto !important;
+        max-width: 100% !important;
+    }
+
+    /* Apilar correctamente los subtemas arriba */
+    aside {
+        position: static !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Convertir todas las rejillas dobles o triples en una sola columna */
+    .grid-modulos, .grid-leccion, .grid-interactivo, .tarjetas-container {
+        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+
+    .tarjeta-modulo, .seccion-contenido {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+/* Forzar que cualquier menú desplegable se ajuste al ancho de su tarjeta contenedora */
+select {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+}
+
+/* Evitar desbordamientos en los textos largos de los selectores en móviles */
+select option {
+    width: 100%;
+    word-wrap: break-word;
+}
+/* Corrección para que el contenido principal fluya de arriba hacia abajo de forma limpia */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Espacio limpio entre el texto de arriba y los módulos de abajo */
+}
+
+/* Estilo para la sección superior (Hero) centrada */
+.seccion-hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.seccion-hero h1 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+    color: #1a202c;
+}
+
+.seccion-hero p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.botones-hero {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Sección de los módulos abajo organizada en cuadrícula */
+.seccion-modulos {
+    width: 100%;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-seccion h2 {
+    font-size: 2rem;
+    color: #1a202c;
+    margin-bottom: 8px;
+}
+
+.titulo-seccion p {
+    color: #4a5568;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeWise | Bienestar y Gestión del Tiempo - UNAD</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="logo">
+            🌿 TimeWise <span class="badge-bienestar">Bienestar UNAD</span>
+        </div>
+        
+        <!-- Botón Hamburguesa para Móviles -->
+        <button class="btn-hamburguesa" onclick="alternarMenuMovil()" aria-label="Abrir menú">
+            ☰
+        </button>
+
+        <nav class="navegacion" id="menu-navegacion">
+            <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+            
+            <!-- MENÚ DESPLEGABLE DE MÓDULOS -->
+            <div class="menu-desplegable">
+                <span class="enlace-desplegable" data-es="Módulos ▾" data-en="Modules ▾">Módulos ▾</span>
+                <div class="contenido-desplegable">
+                    <a href="modulo1.html" data-es="Módulo 1: Fundamentos" data-en="Module 1: Fundamentals">Módulo 1: Fundamentos</a>
+                    <a href="modulo2.html" data-es="Módulo 2: Técnicas" data-en="Module 2: Techniques">Module 2: Techniques</a>
+                    <a href="modulo3.html" data-es="Módulo 3: Herramientas" data-en="Module 3: Tools">Module 3: Tools</a>
+                    <a href="modulo4.html" data-es="Módulo 4: Bienestar" data-en="Module 4: Wellness">Module 4: Wellness</a>
+                    <a href="modulo5.html" data-es="Módulo 5: Hábitos" data-en="Module 5: Habits">Module 5: Habits</a>
+                </div>
+            </div>
+
+            <a href="rutina.html" data-es="Planificador" data-en="Planner">Planificador</a>
+            <a href="creditos.html" data-es="Créditos" data-en="Credits">Créditos</a>
+        </nav>
+
+        <div class="selector-idioma">
+            <button onclick="cambiarIdioma('es')">ES</button>
+            <button onclick="cambiarIdioma('en')">EN</button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor-principal">
+        
+        <!-- SECCIÓN HERO CON IMAGEN DESTACADA -->
+        <section class="seccion-hero" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 40px; text-align: left; margin-bottom: 40px;">
+            
+            <!-- Columna de Texto -->
+            <div style="flex: 1; min-width: 280px;">
+                <span class="etiqueta-hero" data-es="🌱 Equilibrio Académico y Salud Mental" data-en="🌱 Academic Balance and Mental Health">🌱 Equilibrio Académico y Salud Mental</span>
+                <h1 data-es="Gestiona tu tiempo sin descuidar tu bienestar" data-en="Manage your time without neglecting your well-being" style="margin-top: 15px; margin-bottom: 15px;">Gestiona tu tiempo sin descuidar tu bienestar</h1>
+                <p data-es="Un espacio interactivo diseñado para ayudarte a organizar tus semanas universitarias, reducir la procrastinación y encontrar el balance perfecto entre el estudio y el descanso." data-en="An interactive space designed to help you organize your university weeks, reduce procrastination, and find the perfect balance between study and rest." style="margin-bottom: 25px; line-height: 1.6;">
+                    Un espacio interactivo diseñado para ayudarte a organizar tus semanas universitarias, reducir la procrastinación y encontrar el balance perfecto entre el estudio y el descanso.
+                </p>
+                <div class="botones-hero" style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <a href="modulo1.html" class="btn-principal" data-es="Explorar Módulos" data-en="Explore Modules">Explorar Módulos</a>
+                    <a href="rutina.html" class="btn-secundario" data-es="Planificador Diario" data-en="Daily Planner">Planificador Diario</a>
+                </div>
+            </div>
+
+            <!-- Columna de Imagen Llamativa -->
+            <div style="flex: 1; min-width: 280px; text-align: center;">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" alt="Estudiantes universitarios colaborando y organizando su tiempo" style="width: 100%; max-height: 340px; object-fit: cover; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);">
+            </div>
+
+        </section>
+
+        <!-- MÓDULOS DE APRENDIZAJE -->
+        <section class="seccion-modulos">
+            <div class="titulo-seccion">
+                <h2 data-es="Ruta de Aprendizaje y Bienestar" data-en="Learning and Wellness Path">Ruta de Aprendizaje y Bienestar</h2>
+                <p data-es="Módulos interactivos enfocados en tu rendimiento y calidad de vida como estudiante." data-en="Interactive modules focused on your performance and quality of life as a student.">Módulos interactivos enfocados en tu rendimiento y calidad de vida como estudiante.</p>
+            </div>
+
+            <!-- CUADRICULA ADAPTABLE PARA EVITAR RECORTES EN MÓVILES -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; text-align: left;">
+                
+                <!-- Módulo 1 -->
+                <a href="modulo1.html" style="text-decoration: none; color: inherit;">
+                    <div class="tarjeta-modulo" style="height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🌱</div>
+                        <h3 data-es="Módulo 1" data-en="Module 1">Módulo 1</h3>
+                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="1. ¿Por qué gestionar el tiempo?" data-en="1. Why manage time?">1. ¿Por qué gestionar el tiempo?</p>
+                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="2. Identificar distracciones" data-en="2. Identify distractions">2. Identificar distracciones</p>
+                    </div>
+                </a>
+
+                <!-- Módulo 2 -->
+                <a href="modulo2.html" style="text-decoration: none; color: inherit;">
+                    <div class="tarjeta-modulo" style="height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">⏳</div>
+                        <h3 data-es="Módulo 2" data-en="Module 2">Módulo 2</h3>
+                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="3. Técnica Pomodoro" data-en="3. Pomodoro Technique">3. Técnica Pomodoro</p>
+                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="4. Matriz de Eisenhower" data-en="4. Eisenhower Matrix">4. Matriz de Eisenhower</p>
+                    </div>
+                </a>
+
+                <!-- Módulo 3 -->
+                <a href="modulo3.html" style="text-decoration: none; color: inherit;">
+                    <div class="tarjeta-modulo" style="height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">📱</div>
+                        <h3 data-es="Módulo 3" data-en="Module 3">Módulo 3</h3>
+                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="5. Calendarios digitales" data-en="5. Digital calendars">5. Calendarios digitales</p>
+                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="6. Notificaciones y enfoque" data-en="6. Notifications and focus">6. Notificaciones y enfoque</p>
+                    </div>
+                </a>
+
+                <!-- Módulo 4 -->
+                <a href="modulo4.html" style="text-decoration: none; color: inherit;">
+                    <div class="tarjeta-modulo" style="height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🍃</div>
+                        <h3 data-es="Módulo 4" data-en="Module 4">Módulo 4</h3>
+                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="7. Descanso y sueño saludable" data-en="7. Rest and healthy sleep">7. Descanso y sueño saludable</p>
+                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="8. Manejo del estrés académico" data-en="8. Academic stress management">8. Manejo del estrés académico</p>
+                    </div>
+                </a>
+
+                <!-- Módulo 5 -->
+                <a href="modulo5.html" style="text-decoration: none; color: inherit;">
+                    <div class="tarjeta-modulo" style="height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🎯</div>
+                        <h3 data-es="Módulo 5" data-en="Module 5">Módulo 5</h3>
+                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="9. Hábitos sostenibles" data-en="9. Sustainable habits">9. Hábitos sostenibles</p>
+                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="10. Evaluación y mejora" data-en="10. Evaluation and improvement">10. Evaluación y mejora</p>
+                    </div>
+                </a>
+
+                <!-- Créditos -->
+                <a href="creditos.html" style="text-decoration: none; color: inherit;">
+                    <div class="tarjeta-modulo" style="height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">📌</div>
+                        <h3 data-es="Créditos y APA" data-en="Credits and APA">Créditos y APA</h3>
+                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="Referencias bibliográficas" data-en="Bibliographic references">Referencias bibliográficas</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p data-es="Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia | Bienestar Estudiantil" data-en="National Open and Distance University - UNAD | Multimedia Engineering | Student Welfare">
+            Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia | Bienestar Estudiantil
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

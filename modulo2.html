@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2: Técnicas | TimeWise</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="logo">
+            🌿 TimeWise <span class="badge-bienestar" data-es="Módulo 2" data-en="Module 2">Módulo 2</span>
+        </div>
+        
+        <button class="btn-hamburguesa" onclick="alternarMenuMovil()" aria-label="Abrir menú">☰</button>
+
+        <nav class="navegacion" id="menu-navegacion">
+            <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+            
+            <div class="menu-desplegable">
+                <span class="enlace-desplegable" data-es="Módulos ▾" data-en="Modules ▾">Módulos ▾</span>
+                <div class="contenido-desplegable">
+                    <a href="modulo1.html" data-es="Módulo 1: Fundamentos" data-en="Module 1: Fundamentals">Módulo 1: Fundamentos</a>
+                    <a href="modulo2.html" data-es="Módulo 2: Técnicas" data-en="Module 2: Techniques">Module 2: Techniques</a>
+                    <a href="modulo3.html" data-es="Módulo 3: Herramientas" data-en="Module 3: Tools">Module 3: Tools</a>
+                    <a href="modulo4.html" data-es="Módulo 4: Bienestar" data-en="Module 4: Wellness">Module 4: Wellness</a>
+                    <a href="modulo5.html" data-es="Módulo 5: Hábitos" data-en="Module 5: Habits">Module 5: Habits</a>
+                </div>
+            </div>
+
+            <a href="rutina.html" data-es="Planificador" data-en="Planner">Planner</a>
+            <a href="creditos.html" data-es="Créditos" data-en="Credits">Créditos</a>
+        </nav>
+
+        <div class="selector-idioma">
+            <button onclick="cambiarIdioma('es')">ES</button>
+            <button onclick="cambiarIdioma('en')">EN</button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL CON DISEÑO DE DOS COLUMNAS -->
+    <main class="contenedor-principal" style="display: grid; grid-template-columns: 260px 1fr; gap: 30px; align-items: start;">
+        
+        <!-- BARRA LATERAL / ÍNDICE DEL MÓDULO -->
+        <aside style="background: white; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; position: sticky; top: 90px;">
+            <h4 style="color: #2f855a; margin-top: 0; margin-bottom: 15px; font-size: 16px; border-bottom: 2px solid #e6fffa; padding-bottom: 8px;" data-es="Contenido Módulo 2" data-en="Module 2 Contents">Contenido Módulo 2</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px;">
+                <li style="margin-bottom: 12px;"><a href="#subtema1" style="color: #4a5568; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #f8fafc;" data-es="2.1 Técnica Pomodoro" data-en="2.1 Pomodoro Technique">📌 2.1 Técnica Pomodoro</a></li>
+                <li style="margin-bottom: 12px;"><a href="#subtema2" style="color: #4a5568; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #f8fafc;" data-es="2.2 Matriz Eisenhower" data-en="2.2 Eisenhower Matrix">📋 2.2 Matriz Eisenhower</a></li>
+                <li style="margin-bottom: 8px;"><a href="#ejercicio-pomodoro" style="color: #2f855a; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #e6fffa; font-weight: 600;" data-es="⚙️ Reto: Registro Pomodoro" data-en="⚙️ Challenge: Pomodoro Classifier">⚙️ Reto: Registro Pomodoro</a></li>
+                <li><a href="#ejercicio-matriz" style="color: #2f855a; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #e6fffa; font-weight: 600;" data-es="⚙️ Reto: Clasificador Matriz" data-en="⚙️ Challenge: Matrix Classifier">⚙️ Reto: Clasificador Matriz</a></li>
+            </ul>
+        </aside>
+
+        <!-- SECCIÓN CENTRAL DE CONTENIDOS -->
+        <div>
+            <!-- ENLACE DE RETORNO AL INICIO -->
+            <div style="margin-bottom: 20px;">
+                <a href="index.html" style="color: #2f855a; text-decoration: none; font-weight: 600; font-size: 14px;" data-es="← Volver al inicio" data-en="← Back to home">← Volver al inicio</a>
+            </div>
+
+            <!-- SUBTEMA 2.1 -->
+            <section id="subtema1" class="tarjeta-modulo" style="margin-bottom: 30px; border-left: 5px solid #2f855a;">
+                <div style="margin-bottom: 15px;">
+                    <span style="background: #e6fffa; color: #2c7a7b; font-size: 12px; padding: 6px 14px; border-radius: 20px; font-weight: 600; display: inline-block;" data-es="Lección 2.1" data-en="Subtopic 2.1">Bloque 2.1</span>
+                </div>
+                
+                <h1 style="font-size: 24px; color: #1a202c; margin-top: 5px; margin-bottom: 10px;" 
+                    data-es="La Técnica Pomodoro para la concentración profunda" 
+                    data-en="The Pomodoro Technique for deep focus">
+                    La Técnica Pomodoro para la concentración profunda
+                </h1>
+
+                <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;" 
+                   data-es="Aprende a dividir tu tiempo en bloques estructurados de trabajo intenso alternados con descansos breves. Esta metodología evita la fatiga cognitiva y optimiza el rendimiento en tareas de desarrollo y diseño." 
+                   data-en="Learn to divide your time into structured blocks of intense work alternated with brief breaks. This methodology prevents cognitive fatigue and optimizes performance in development and design tasks.">
+                   Aprende a dividir tu tiempo en bloques estructurados de trabajo intenso alternados con descansos breves. Esta metodología evita la fatiga cognitiva y optimiza el rendimiento en tareas de desarrollo y diseño.
+                </p>
+
+                <!-- IMAGEN ILUSTRATIVA SUBTEMA 2.1 -->
+                <div style="margin-bottom: 25px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=900&q=80" alt="Técnica Pomodoro y enfoque temporal" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                    <div onclick="desplegarDetalle('detalleMod2_1')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="🍅 Bloque de Trabajo (25 min)" data-en="🍅 Work Block (25 min)">🍅 Bloque de Trabajo (25 min)</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Enfoque total en una sola tarea académica sin revisar el celular." data-en="Total focus on a single academic task without checking the phone.">Enfoque total en una sola tarea académica sin revisar el celular.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod2_1" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Tip):" data-en="💡 Learn more (Tip):">💡 Saber más (Tip):</strong> 
+                            <span data-es="Utiliza modo avión y bloqueadores de notificaciones. Si surge una idea ajena, anótala en un papel y vuelve al enfoque." data-en="Use airplane mode and notification blockers. If an external idea comes up, write it on paper and return to focus.">Utiliza modo avión y bloqueadores de notificaciones. Si surge una idea ajena, anótala en un papel y vuelve al enfoque.</span>
+                        </div>
+                    </div>
+
+                    <div onclick="desplegarDetalle('detalleMod2_2')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="🌿 Descanso Activo (5 min)" data-en="🌿 Active Break (5 min)">🌿 Descanso Activo (5 min)</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Estira las manos, levántate, hidrátate y aparta la vista de la pantalla." data-en="Stretch your hands, get up, hydrate, and look away from the screen.">Estira las manos, levántate, hidrátate y aparta la vista de la pantalla.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod2_2" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Tip):" data-en="💡 Learn more (Tip):">💡 Saber más (Tip):</strong> 
+                            <span data-es="Aplica la regla 20-20-20: mira a 6 metros de distancia durante 20 segundos para relajar la musculatura ocular." data-en="Apply the 20-20-20 rule: look 6 meters away for 20 seconds to relax eye muscles.">Aplica la regla 20-20-20: mira a 6 metros de distancia durante 20 segundos para relajar la musculatura ocular.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EJERCICIO INTERACTIVO 1: REGISTRO DE POMODOROS -->
+            <section id="ejercicio-pomodoro" class="tarjeta-modulo" style="background: #f7fafc; border: 1px solid #e2e8f0; border-top: 5px solid #2f855a; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
+                <h3 style="color: #2f855a; margin-top: 0; margin-bottom: 10px;" data-es="⚙️ Ejercicio Práctico: Planificador de Pomodoros para tu Tarea" data-en="⚙️ Practical Exercise: Pomodoro Planner for Your Task">⚙️ Ejercicio Práctico: Planificador de Pomodoros para tu Tarea</h3>
+                <p style="font-size: 14px; color: #4a5568; margin-bottom: 20px;" data-es="Escribe una tarea pendiente de tu universidad, asígnale cuántos bloques de 25 minutos crees que requiere y genera tu tarjeta de control." data-en="Write down a pending university task, assign how many 25-minute blocks you think it requires, and generate your control card.">Escribe una tarea pendiente de tu universidad, asígnale cuántos bloques de 25 minutos crees que requiere y genera tu tarjeta de control.</p>
+                
+                <div style="display: flex; gap: 10px; flex-direction: column; margin-bottom: 15px;">
+                    <input type="text" id="input-tarea" data-es-placeholder="Ej. Diseñar interfaz o redactar informe..." data-en-placeholder="E.g. Design interface or write report..." placeholder="Ej. Diseñar interfaz o redactar informe..." style="padding: 10px; border: 1px solid #cbd5e0; border-radius: 6px; font-size: 14px;">
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <label style="font-size: 14px; font-weight: 600; color: #2d3748;" data-es="Bloques estimados (25 min c/u):" data-en="Estimated blocks (25 min each):">Bloques estimados (25 min c/u):</label>
+                        <input type="number" id="input-pomodoros" min="1" max="8" value="2" style="padding: 8px; width: 60px; border: 1px solid #cbd5e0; border-radius: 6px; font-size: 14px;">
+                        <button onclick="agregarMetaPomodoro()" style="background: #2f855a; color: white; border: none; padding: 9px 18px; border-radius: 6px; font-weight: 600; cursor: pointer;" data-es="Crear Meta Pomodoro" data-en="Create Pomodoro Goal">Crear Meta Pomodoro</button>
+                    </div>
+                </div>
+
+                <div id="lista-pomodoros-generada" style="background: white; padding: 15px; border-radius: 8px; border: 1px dashed #cbd5e0; font-size: 14px; color: #4a5568; display: none;">
+                    <!-- Aquí se muestra la tarjeta interactiva creada -->
+                </div>
+            </section>
+
+            <!-- SUBTEMA 2.2 -->
+            <section id="subtema2" class="tarjeta-modulo" style="margin-bottom: 30px; border-left: 5px solid #319795;">
+                <div style="margin-bottom: 15px;">
+                    <span style="background: #e6fffa; color: #2c7a7b; font-size: 12px; padding: 6px 14px; border-radius: 20px; font-weight: 600; display: inline-block;" data-es="Lección 2.2" data-en="Subtopic 2.2">Bloque 2.2</span>
+                </div>
+                
+                <h2 style="font-size: 22px; color: #1a202c; margin-top: 5px; margin-bottom: 10px;" 
+                    data-es="La Matriz de Eisenhower (Urgente vs Importante)" 
+                    data-en="The Eisenhower Matrix (Urgent vs Important)">
+                    La Matriz de Eisenhower (Urgente vs Importante)
+                </h2>
+
+                <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;" 
+                   data-es="Clasifica tus actividades universitarias según su nivel de urgencia e impacto. Esta herramienta te permite discernir entre apagar incendios de último momento y planificar estratégicamente tus entregas." 
+                   data-en="Classify your university activities according to their level of urgency and impact. This tool allows you to discern between putting out last-minute fires and strategically planning your deliverables.">
+                   Clasifica tus actividades universitarias según su nivel de urgencia e impacto. Esta herramienta te permite discernir entre apagar incendios de último momento y planificar estratégicamente tus entregas.
+                </p>
+
+                <!-- IMAGEN ILUSTRATIVA SUBTEMA 2.2 -->
+                <div style="margin-bottom: 25px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="Matriz de Eisenhower y priorización de tareas" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                    <div onclick="desplegarDetalle('detalleMod2_3')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="🚨 Hacer (Urgente e Importante)" data-en="🚨 Do (Urgent & Important)">🚨 Hacer (Urgente e Importante)</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Tareas con fechas límite próximas y alto impacto académico." data-en="Tasks with upcoming deadlines and high academic impact.">Tareas con fechas límite próximas y alto impacto académico.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod2_3" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Tip):" data-en="💡 Learn more (Tip):">💡 Saber más (Tip):</strong> 
+                            <span data-es="Resuélvelas de inmediato dedicándoles bloques de máxima concentración sin distracciones." data-en="Resolve them immediately by devoting blocks of maximum concentration without distractions.">Resuélvelas de inmediato dedicándoles bloques de máxima concentración sin distracciones.</span>
+                        </div>
+                    </div>
+
+                    <div onclick="desplegarDetalle('detalleMod2_4')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="📅 Planificar (No Urgente pero Importante)" data-en="📅 Schedule (Not Urgent but Important)">📅 Planificar (No Urgente pero Importante)</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Proyectos a largo plazo, lecturas previas y autocuidado." data-en="Long-term projects, preparatory readings, and self-care.">Proyectos a largo plazo, lecturas previas y autocuidado.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod2_4" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Tip):" data-en="💡 Learn more (Tip):">💡 Saber más (Tip):</strong> 
+                            <span data-es="Establece fechas en tu calendario para evitar que se conviertan en emergencias de última hora." data-en="Set dates in your calendar to prevent them from becoming last-minute emergencies.">Establece fechas en tu calendario para evitar que se conviertan en emergencias de última hora.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EJERCICIO INTERACTIVO 2: CLASIFICADOR EISENHOWER -->
+            <section id="ejercicio-matriz" class="tarjeta-modulo" style="background: #f7fafc; border: 1px solid #e2e8f0; border-top: 5px solid #319795; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
+                <h3 style="color: #319795; margin-top: 0; margin-bottom: 10px;" data-es="⚙️ Ejercicio Práctico: Clasifica tu Actividad en la Matriz" data-en="⚙️ Practical Exercise: Classify Your Activity in the Matrix">⚙️ Ejercicio Práctico: Clasifica tu Actividad en la Matriz</h3>
+                <p style="font-size: 14px; color: #4a5568; margin-bottom: 20px;" data-es="Selecciona una actividad típica y decide a qué cuadrante de la Matriz de Eisenhower pertenece para evaluar tu criterio estratégico." data-en="Select a typical activity and decide which quadrant of the Eisenhower Matrix it belongs to to evaluate your strategic criteria.">Selecciona una actividad típica y decide a qué cuadrante de la Matriz de Eisenhower pertenece para evaluar tu criterio estratégico.</p>
+                
+                <div style="margin-bottom: 15px;">
+                    <label style="font-size: 14px; font-weight: 600; color: #2d3748; display: block; margin-bottom: 8px;" data-es="Actividad a evaluar:" data-en="Activity to evaluate:">Actividad a evaluar:</label>
+                    <p style="background: white; padding: 12px; border-radius: 6px; border: 1px solid #cbd5e0; font-weight: 600; color: #1a202c;" id="texto-actividad-reto" data-es="Entrega final de un trabajo colaborativo que vence en menos de 24 horas." data-en="Final submission of a collaborative assignment due in less than 24 hours.">Entrega final de un trabajo colaborativo que vence en menos de 24 horas.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+                    <button onclick="verificarEisenhower('hacer')" style="background: white; border: 1px solid #cbd5e0; padding: 10px; border-radius: 6px; cursor: pointer; text-align: left; font-size: 13px;" data-es="🚨 Hacer (Urgente e Importante)" data-en="🚨 Do (Urgent & Important)">🚨 Hacer (Urgente e Importante)</button>
+                    <button onclick="verificarEisenhower('planificar')" style="background: white; border: 1px solid #cbd5e0; padding: 10px; border-radius: 6px; cursor: pointer; text-align: left; font-size: 13px;" data-es="📅 Planificar (No Urgente pero Importante)" data-en="📅 Schedule (Not Urgent but Important)">📅 Planificar (No Urgente pero Importante)</button>
+                </div>
+
+                <div id="resultado-matriz-reto" style="background: white; padding: 15px; border-radius: 8px; border: 1px dashed #cbd5e0; font-size: 14px; color: #4a5568; display: none;">
+                    <!-- Retroalimentación dinámica -->
+                </div>
+            </section>
+
+            <!-- NAVEGACIÓN INFERIOR -->
+            <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <a href="modulo1.html" class="btn-principal" data-es="← Módulo 1" data-en="← Module 1">← Módulo 1</a>
+                <a href="modulo3.html" class="btn-principal" data-es="Módulo 3 →" data-en="Module 3 →">Módulo 3 →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p data-es="Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia" data-en="National Open and Distance University - UNAD | Multimedia Engineering">
+            Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia
+        </p>
+    </footer>
+
+    <!-- SCRIPT DE INTERACTIVIDAD ESPECÍFICO DE MÓDULO 2 -->
+    <script>
+        function desplegarDetalle(id) {
+            const elemento = document.getElementById(id);
+            if (elemento.style.display === "none" || elemento.style.display === "") {
+                elemento.style.display = "block";
+            } else {
+                elemento.style.display = "none";
+            }
+        }
+
+        function agregarMetaPomodoro() {
+            let tarea = document.getElementById('input-tarea').value.trim();
+            let bloques = document.getElementById('input-pomodoros').value;
+            let contenedor = document.getElementById('lista-pomodoros-generada');
+            const idiomaActual = localStorage.getItem('idiomaTimeWise') || 'es';
+            
+            if (tarea === "") {
+                alert(idiomaActual === 'en' ? "Please write a valid task." : "Por favor escribe una tarea válida.");
+                return;
+            }
+
+            contenedor.style.display = 'block';
+            let htmlPomodoros = '';
+            for (let i = 1; i <= bloques; i++) {
+                htmlPomodoros += `<span style="display: inline-block; background: #e6fffa; color: #2c7a7b; padding: 4px 8px; margin: 4px; border-radius: 4px; font-weight: 600;">🍅 P${i} (25m)</span>`;
+            }
+
+            if (idiomaActual === 'en') {
+                contenedor.innerHTML = `<strong style="color: #2f855a;">Focus Card Created:</strong><br>` +
+                    `• <strong>Task:</strong> ${tarea}<br>` +
+                    `• <strong>Estimated structure:</strong> ${bloques} blocks (${bloques * 25} minutes of total work)<br>` +
+                    `<div style="margin-top: 8px;">${htmlPomodoros}</div>`;
+            } else {
+                contenedor.innerHTML = `<strong style="color: #2f855a;">Tarjeta de Enfoque Creada:</strong><br>` +
+                    `• <strong>Tarea:</strong> ${tarea}<br>` +
+                    `• <strong>Estructura estimada:</strong> ${bloques} bloques (${bloques * 25} minutos de trabajo total)<br>` +
+                    `<div style="margin-top: 8px;">${htmlPomodoros}</div>`;
+            }
+        }
+
+        function verificarEisenhower(opcion) {
+            let contenedor = document.getElementById('resultado-matriz-reto');
+            contenedor.style.display = 'block';
+            const idiomaActual = localStorage.getItem('idiomaTimeWise') || 'es';
+
+            if (opcion === 'hacer') {
+                contenedor.innerHTML = idiomaActual === 'en'
+                    ? `<strong style="color: #2f855a;">Correct! 🎯</strong> It belongs to the <strong>Do</strong> quadrant, as it has an immediate deadline and a direct impact on your grades. It requires your urgent attention without distractions.`
+                    : `<strong style="color: #2f855a;">¡Correcto! 🎯</strong> Pertenece al cuadrante <strong>Hacer</strong>, ya que tiene una fecha límite inmediata y un impacto directo en tus calificaciones. Requiere tu atención urgente sin distracciones.`;
+            } else {
+                contenedor.innerHTML = idiomaActual === 'en'
+                    ? `<strong style="color: #c53030;">Incorrect. ⚠️</strong> Since it's due in less than 24 hours and has high impact, it is no longer just a task to schedule, but an emergency or urgent case you must solve (<strong>Do</strong> quadrant).`
+                    : `<strong style="color: #c53030;">Incorrecto. ⚠️</strong> Al vencer en menos de 24 horas y tener alta repercusión, deja de ser una tarea solo para planificar y pasa a ser un caso de emergencia o urgencia que debes resolver (cuadrante <strong>Hacer</strong>).`;
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

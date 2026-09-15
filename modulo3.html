@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3: Herramientas | TimeWise</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="logo">
+            🌿 TimeWise <span class="badge-bienestar" data-es="Módulo 3" data-en="Module 3">Módulo 3</span>
+        </div>
+        
+        <button class="btn-hamburguesa" onclick="alternarMenuMovil()" aria-label="Abrir menú">☰</button>
+
+        <nav class="navegacion" id="menu-navegacion">
+            <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+            
+            <div class="menu-desplegable">
+                <span class="enlace-desplegable" data-es="Módulos ▾" data-en="Modules ▾">Módulos ▾</span>
+                <div class="contenido-desplegable">
+                    <a href="modulo1.html" data-es="Módulo 1: Fundamentos" data-en="Module 1: Fundamentals">Módulo 1: Fundamentos</a>
+                    <a href="modulo2.html" data-es="Módulo 2: Técnicas" data-en="Module 2: Techniques">Module 2: Techniques</a>
+                    <a href="modulo3.html" data-es="Módulo 3: Herramientas" data-en="Module 3: Tools">Module 3: Tools</a>
+                    <a href="modulo4.html" data-es="Módulo 4: Bienestar" data-en="Module 4: Wellness">Module 4: Wellness</a>
+                    <a href="modulo5.html" data-es="Módulo 5: Hábitos" data-en="Module 5: Habits">Module 5: Habits</a>
+                </div>
+            </div>
+
+            <a href="rutina.html" data-es="Planificador" data-en="Planner">Planner</a>
+            <a href="creditos.html" data-es="Créditos" data-en="Credits">Créditos</a>
+        </nav>
+
+        <div class="selector-idioma">
+            <button onclick="cambiarIdioma('es')">ES</button>
+            <button onclick="cambiarIdioma('en')">EN</button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL CON DISEÑO DE DOS COLUMNAS -->
+    <main class="contenedor-principal" style="display: grid; grid-template-columns: 260px 1fr; gap: 30px; align-items: start;">
+        
+        <!-- BARRA LATERAL / ÍNDICE DEL MÓDULO -->
+        <aside style="background: white; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; position: sticky; top: 90px;">
+            <h4 style="color: #2f855a; margin-top: 0; margin-bottom: 15px; font-size: 16px; border-bottom: 2px solid #e6fffa; padding-bottom: 8px;" data-es="Contenido Módulo 3" data-en="Module 3 Contents">Contenido Módulo 3</h4>
+            <ul class="lista-subtemas" style="list-style: none; padding: 0; margin: 0; font-size: 14px;">
+                <li style="margin-bottom: 12px;"><a href="#subtema1" style="color: #4a5568; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #f8fafc;" data-es="3.1 Apps de Productividad" data-en="3.1 Productivity Apps"><span style="margin-right: 5px;">📌</span>3.1 Apps de Productividad</a></li>
+                <li style="margin-bottom: 12px;"><a href="#subtema2" style="color: #4a5568; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #f8fafc;" data-es="3.2 Entornos de Estudio" data-en="3.2 Study Environments"><span style="margin-right: 5px;">📌</span>3.2 Entornos Digitales</a></li>
+                <li style="margin-bottom: 8px;"><a href="#ejercicio-herramientas" style="color: #2f855a; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #e6fffa; font-weight: 600;" data-es="⚙️ Reto: Apps" data-en="⚙️ Challenge: Apps"><span>⚙️</span> Reto: Apps</a></li>
+                <li><a href="#ejercicio-notificaciones" style="color: #2f855a; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #e6fffa; font-weight: 600;" data-es="⚙️ Reto: Enfoque" data-en="⚙️ Challenge: Focus"><span>⚙️</span> Reto: Enfoque</a></li>
+            </ul>
+        </aside>
+
+        <!-- SECCIÓN CENTRAL DE CONTENIDOS -->
+        <div class="seccion-contenido">
+            <!-- ENLACE DE RETORNO AL INICIO -->
+            <div class="migas-pan" style="margin-bottom: 20px;">
+                <a href="index.html" style="color: #2f855a; text-decoration: none; font-weight: 600; font-size: 14px;" data-es="← Volver al inicio" data-en="← Back to home">← Volver al inicio</a>
+            </div>
+
+            <!-- SUBTEMA 3.1 -->
+            <section id="subtema1" class="tarjeta-modulo" style="margin-bottom: 30px; border-left: 5px solid #2f855a;">
+                <div style="margin-bottom: 15px;">
+                    <span style="background: #e6fffa; color: #2c7a7b; font-size: 12px; padding: 6px 14px; border-radius: 20px; font-weight: 600; display: inline-block;" data-es="Lección 3.1" data-en="Subtopic 3.1">Bloque 3.1</span>
+                </div>
+                
+                <h1 style="font-size: 24px; color: #1a202c; margin-top: 5px; margin-bottom: 10px;" 
+                    data-es="Herramientas digitales y gestión de tareas" 
+                    data-en="Digital tools and task management">
+                    Herramientas digitales y gestión de tareas
+                </h1>
+
+                <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;" 
+                   data-es="Descubre plataformas de software diseñadas para centralizar compromisos académicos y visualizar flujos de trabajo eficientes. Conoce cómo elegir el ecosistema digital que mejor se adapte a tus dispositivos de estudio." 
+                   data-en="Discover software platforms designed to centralize academic commitments and visualize efficient workflows. Learn how to choose the digital ecosystem that best suits your study devices.">
+                   Descubre plataformas de software diseñadas para centralizar compromisos académicos y visualizar flujos de trabajo eficientes. Conoce cómo elegir el ecosistema digital que mejor se adapte a tus dispositivos de estudio.
+                </p>
+
+                <!-- IMAGEN ILUSTRATIVA SUBTEMA 3.1 -->
+                <div style="margin-bottom: 25px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" alt="Herramientas digitales y software de gestión" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                </div>
+
+                <div class="grid-leccion" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                    <div onclick="desplegarDetalle('detalleMod3_1')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="📅 Calendarios Digitales" data-en="📅 Digital Calendars">📅 Calendarios Digitales</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Centraliza clases, entregas y plazos de proyectos en un solo lugar." data-en="Centralize classes, deadlines, and project milestones in one place.">Centraliza clases, entregas y plazos de proyectos en un solo lugar.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod3_1" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Tip Tecnológico):" data-en="💡 Learn more (Tech Tip):">💡 Saber más (Tip Tecnológico):</strong> 
+                            <span data-es="Usa códigos de color por materia (por ejemplo, verde para multimedia, azul para investigación) para identificar tus compromisos de un vistazo." data-en="Use color codes per subject (e.g., green for multimedia, blue for research) to spot your commitments at a glance.">Usa códigos de color por materia (por ejemplo, verde para multimedia, azul para investigación) para identificar tus compromisos de un vistazo.</span>
+                        </div>
+                    </div>
+
+                    <div onclick="desplegarDetalle('detalleMod3_2')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="📋 Tableros Kanban" data-en="📋 Kanban Boards">📋 Tableros Kanban</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Visualiza el flujo de tus tareas (Pendiente, En Proceso, Completado)." data-en="Visualize your task workflow (Pending, In Progress, Completed).">Visualiza el flujo de tus tareas (Pendiente, En Proceso, Completado).</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod3_2" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Tip de Gestión):" data-en="💡 Learn more (Management Tip):">💡 Saber más (Tip de Gestión):</strong> 
+                            <span data-es="Ideal para dividir proyectos complejos de desarrollo o diseño en micro-tareas manejables paso a paso." data-en="Ideal for breaking down complex development or design projects into manageable step-by-step micro-tasks.">Ideal para dividir proyectos complejos de desarrollo o diseño en micro-tareas manejables paso a paso.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EJERCICIO INTERACTIVO 1: SELECTOR DE APPS -->
+            <section id="ejercicio-herramientas" class="tarjeta-modulo" style="background: #f7fafc; border: 1px solid #e2e8f0; border-top: 5px solid #2f855a; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
+                <h3 style="color: #2f855a; margin-top: 0; margin-bottom: 10px;" data-es="⚙️ Ejercicio Práctico: ¿Qué Herramienta Necesitas?" data-en="⚙️ Practical Exercise: What Tool Do You Need?">⚙️ Ejercicio Práctico: ¿Qué Herramienta Necesitas?</h3>
+                <p style="font-size: 14px; color: #4a5568; margin-bottom: 20px;" data-es="Selecciona una necesidad académica actual y descubre cuál es la solución digital recomendada para optimizarla." data-en="Select a current academic need and discover the recommended digital solution to optimize it.">Selecciona una necesidad académica actual y descubre cuál es la solución digital recomendada para optimizarla.</p>
+                
+                <div style="display: flex; gap: 10px; flex-direction: column; margin-bottom: 15px;">
+                    <label style="font-size: 14px; font-weight: 600; color: #2d3748;" data-es="Selecciona tu objetivo actual:" data-en="Select your current goal:">Selecciona tu objetivo actual:</label>
+                    <select id="select-objetivo-app" style="padding: 10px; border: 1px solid #cbd5e0; border-radius: 6px; font-size: 14px; width: 100%; box-sizing: border-box; max-width: 100%;">
+                        <option value="fechas" data-es="Visualizar fechas límite de entregas y exámenes" data-en="Visualize delivery deadlines and exams">Visualizar fechas límite de entregas y exámenes</option>
+                        <option value="kanban" data-es="Organizar las fases de un proyecto multimedia paso a paso" data-en="Organize the phases of a multimedia project step by step">Organizar las fases de un proyecto multimedia paso a paso</option>
+                        <option value="apuntes" data-es="Tomar apuntes a mano o crear esquemas visuales" data-en="Take handwritten notes or create visual diagrams">Tomar apuntes a mano o crear esquemas visuales</option>
+                    </select>
+                    <button onclick="recomendarHerramienta()" style="background: #2f855a; color: white; border: none; padding: 9px 18px; border-radius: 6px; font-weight: 600; cursor: pointer; align-self: flex-start;" data-es="Obtener Recomendación" data-en="Get Recommendation">Obtener Recomendación</button>
+                </div>
+
+                <div id="resultado-recomendacion" style="background: white; padding: 15px; border-radius: 8px; border: 1px dashed #cbd5e0; font-size: 14px; color: #4a5568; display: none;">
+                    <!-- Resultado dinámico -->
+                </div>
+            </section>
+
+            <!-- SUBTEMA 3.2 -->
+            <section id="subtema2" class="tarjeta-modulo" style="margin-bottom: 30px; border-left: 5px solid #319795;">
+                <div style="margin-bottom: 15px;">
+                    <span style="background: #e6fffa; color: #2c7a7b; font-size: 12px; padding: 6px 14px; border-radius: 20px; font-weight: 600; display: inline-block;" data-es="Lección 3.2" data-en="Subtopic 3.2">Bloque 3.2</span>
+                </div>
+                
+                <h2 style="font-size: 24px; color: #1a202c; margin-top: 5px; margin-bottom: 10px;" 
+                    data-es="Optimización del espacio de trabajo digital" 
+                    data-en="Optimization of the digital workspace">
+                    Optimización del espacio de trabajo digital
+                </h2>
+
+                <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;" 
+                   data-es="Configura tus dispositivos móviles y equipos de cómputo para minimizar la fatiga visual y digital. Aprende a estructurar archivos en la nube de forma limpia para asegurar un flujo creativo fluido." 
+                   data-en="Configure your mobile devices and computers to minimize visual and digital fatigue. Learn to structure files in the cloud cleanly to ensure a smooth creative flow.">
+                   Configura tus dispositivos móviles y equipos de cómputo para minimizar la fatiga visual y digital. Aprende a estructurar archivos en la nube de forma limpia para asegurar un flujo creativo fluido.
+                </p>
+
+                <!-- IMAGEN ILUSTRATIVA SUBTEMA 3.2 -->
+                <div style="margin-bottom: 25px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Optimización del espacio de trabajo digital y dispositivos" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                </div>
+
+                <div class="grid-leccion" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                    <div onclick="desplegarDetalle('detalleMod3_3')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="📱 Control de Notificaciones" data-en="📱 Notification Control">📱 Control de Notificaciones</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Silencia aplicaciones no esenciales durante tus bloques de estudio profundo." data-en="Mute non-essential apps during your deep study blocks.">Silencia aplicaciones no esenciales durante tus bloques de estudio profundo.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod3_3" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Acción):" data-en="💡 Learn more (Action):">💡 Saber más (Acción):</strong> 
+                            <span data-es="Configura modos de concentración automáticos en tu teléfono o tablet para bloquear redes sociales en horarios de universidad." data-en="Set up automatic focus modes on your phone or tablet to block social media during university hours.">Configura modos de concentración automáticos en tu teléfono o tablet para bloquear redes sociales en horarios de universidad.</span>
+                        </div>
+                    </div>
+
+                    <div onclick="desplegarDetalle('detalleMod3_4')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="📁 Arquitectura de Archivos" data-en="📁 File Architecture">📁 Arquitectura de Archivos</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Estructura carpetas y la nube de forma limpia para evitar perder recursos." data-en="Structure folders and cloud storage cleanly to avoid losing resources.">Estructura carpetas y la nube de forma limpia para evitar perder recursos.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod3_4" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Acción):" data-en="💡 Learn more (Action):">💡 Saber más (Acción):</strong> 
+                            <span data-es="Organiza por semestre, materia y tipo de entrega (assets, código, documentos) para localizar archivos en segundos." data-en="Organize by semester, subject, and delivery type (assets, code, documents) to locate files in seconds.">Organiza por semestre, materia y tipo de entrega (assets, código, documentos) para localizar archivos en segundos.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EJERCICIO INTERACTIVO 2: PLAN DE ENFOQUE Y NOTIFICACIONES -->
+            <section id="ejercicio-notificaciones" class="tarjeta-modulo" style="background: #f7fafc; border: 1px solid #e2e8f0; border-top: 5px solid #319795; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
+                <h3 style="color: #319795; margin-top: 0; margin-bottom: 10px;" data-es="⚙️ Ejercicio Práctico: Configura tu Perfil Anti-Distracciones" data-en="⚙️ Practical Exercise: Configure Your Anti-Distraction Profile">⚙️ Ejercicio Práctico: Configura tu Perfil Anti-Distracciones</h3>
+                <p style="font-size: 14px; color: #4a5568; margin-bottom: 20px;" data-es="Selecciona qué app o hábito te genera más interrupciones y genera tu compromiso de bloqueo digital." data-en="Select which app or habit causes the most interruptions and generate your digital blocking commitment.">Selecciona qué app o hábito te genera más interrupciones y genera tu compromiso de bloqueo digital.</p>
+                
+                <div style="display: flex; gap: 10px; flex-direction: column; margin-bottom: 15px;">
+                    <label style="font-size: 14px; font-weight: 600; color: #2d3748;" data-es="Principal fuente de distracción:" data-en="Main source of distraction:">Principal fuente de distracción:</label>
+                    <select id="select-distraccion" style="padding: 10px; border: 1px solid #cbd5e0; border-radius: 6px; font-size: 14px; width: 100%; box-sizing: border-box; max-width: 100%;">
+                        <option value="redes" data-es="Notificaciones de redes sociales en el celular" data-en="Social media notifications on mobile">Notificaciones de redes sociales en el celular</option>
+                        <option value="mensajeria" data-es="Grupos de chat académicos o sociales constantes" data-en="Constant academic or social chat groups">Grupos de chat académicos o sociales constantes</option>
+                        <option value="pestañas" data-es="Exceso de pestañas abiertas en el navegador" data-en="Excess of open browser tabs">Exceso de pestañas abiertas en el navegador</option>
+                    </select>
+                    <button onclick="generarPlanEnfoque()" style="background: #319795; color: white; border: none; padding: 9px 18px; border-radius: 6px; font-weight: 600; cursor: pointer; align-self: flex-start;" data-es="Generar Regla de Bloqueo" data-en="Generate Blocking Rule">Generar Regla de Bloqueo</button>
+                </div>
+
+                <div id="resultado-plan-enfoque" style="background: white; padding: 15px; border-radius: 8px; border: 1px dashed #cbd5e0; font-size: 14px; color: #4a5568; display: none;">
+                    <!-- Resultado dinámico -->
+                </div>
+            </section>
+
+            <!-- NAVEGACIÓN INFERIOR -->
+            <div style="display: flex; justify-content: space-between; margin-top: 10px;">
+                <a href="modulo2.html" class="btn-principal" data-es="← Módulo 2" data-en="← Module 2">← Módulo 2</a>
+                <a href="modulo4.html" class="btn-principal" data-es="Módulo 4 →" data-en="Module 4 →">Módulo 4 →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p data-es="Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia" data-en="National Open and Distance University - UNAD | Multimedia Engineering">
+            Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia
+        </p>
+    </footer>
+
+    <!-- SCRIPT DE INTERACTIVIDAD -->
+    <script>
+        function desplegarDetalle(id) {
+            const elemento = document.getElementById(id);
+            if (elemento.style.display === "none" || elemento.style.display === "") {
+                elemento.style.display = "block";
+            } else {
+                elemento.style.display = "none";
+            }
+        }
+
+        function recomendarHerramienta() {
+            let objetivo = document.getElementById('select-objetivo-app').value;
+            let contenedor = document.getElementById('resultado-recomendacion');
+            contenedor.style.display = 'block';
+            const idiomaActual = localStorage.getItem('idiomaTimeWise') || 'es';
+
+            if (objetivo === 'fechas') {
+                contenedor.innerHTML = idiomaActual === 'en'
+                    ? `<strong style="color: #2f855a;">💡 Tech Recommendation:</strong> Use a <strong>Digital Calendar</strong> (such as Google Calendar). Set alerts 24 and 48 hours in advance for each university assignment and use different colors for each subject.`
+                    : `<strong style="color: #2f855a;">💡 Recomendación Tecnológica:</strong> Utiliza un <strong>Calendario Digital</strong> (como Google Calendar). Configura alertas con 24 y 48 horas de anticipación para cada entrega de la universidad y usa colores distintos por cada materia.`;
+            } else if (objetivo === 'kanban') {
+                contenedor.innerHTML = idiomaActual === 'en'
+                    ? `<strong style="color: #2f855a;">💡 Tech Recommendation:</strong> Use a <strong>visual Kanban board</strong> (such as Trello or Notion). Structure your columns into: <em>Ideas, To Do, In Progress, and Completed</em> to track real progress on your designs and prototypes.`
+                    : `<strong style="color: #2f855a;">💡 Recomendación Tecnológica:</strong> Utiliza un tablero <strong>Kanban visual</strong> (como Trello o Notion). Estructura tus columnas en: <em>Ideas, Por Hacer, En Proceso y Entregado</em> para ver el avance real de tus diseños y prototipos.`;
+            } else {
+                contenedor.innerHTML = idiomaActual === 'en'
+                    ? `<strong style="color: #2f855a;">💡 Tech Recommendation:</strong> Use a <strong>digital note-taking app with stylus support</strong> (such as GoodNotes or Notability on a tablet). Ideal for diagrams, flowcharts, and quick wireframes.`
+                    : `<strong style="color: #2f855a;">💡 Recomendación Tecnológica:</strong> Utiliza una aplicación de <strong>toma de notas digitales con soporte para lápiz óptico</strong> (como GoodNotes o Notability en tablet). Ideal para esquemas, diagramas de flujo y wireframes rápidos.`;
+            }
+        }
+
+        function generarPlanEnfoque() {
+            let distraccion = document.getElementById('select-distraccion').value;
+            let contenedor = document.getElementById('resultado-plan-enfoque');
+            contenedor.style.display = 'block';
+            const idiomaActual = localStorage.getItem('idiomaTimeWise') || 'es';
+
+            if (distraccion === 'redes') {
+                contenedor.innerHTML = idiomaActual === 'en'
+                    ? `<strong style="color: #319795;">🛡️ Anti-Distraction Rule Activated:</strong><br>` +
+                      `• <strong>Action:</strong> Enable <em>Focus / Do Not Disturb Mode</em> on your smartphone during 25-minute study blocks.<br>` +
+                      `• <strong>Benefit:</strong> Prevents micro-interruptions that destroy deep concentration during programming or design tasks.`
+                    : `<strong style="color: #319795;">🛡️ Regla Antidistracciones Activada:</strong><br>` +
+                      `• <strong>Acción:</strong> Activar el <em>Modo Enfoque / No Molestar</em> en el smartphone durante bloques de estudio de 25 minutos.<br>` +
+                      `• <strong>Beneficio:</strong> Evita micro-interrupciones que destruyen la concentración profunda en tareas de programación o diseño.`;
+            } else if (distraccion === 'mensajeria') {
+                contenedor.innerHTML = idiomaActual === 'en'
+                    ? `<strong style="color: #319795;">🛡️ Anti-Distraction Rule Activated:</strong><br>` +
+                      `• <strong>Action:</strong> Mute pop-up notifications from group chats and check messages only during active breaks (every hour).<br>` +
+                      `• <strong>Benefit:</strong> Maintains academic courtesy without losing the creative thread of your assignments.`
+                    : `<strong style="color: #319795;">🛡️ Regla Antidistracciones Activada:</strong><br>` +
+                      `• <strong>Acción:</strong> Silenciar notificaciones emergentes de chats grupales y revisar mensajes únicamente durante los descansos activos (cada hora).<br>` +
+                      `• <strong>Beneficio:</strong> Mantienes la cordialidad académica sin perder el hilo creativo de tus entregas.`;
+            } else {
+                contenedor.innerHTML = idiomaActual === 'en'
+                    ? `<strong style="color: #319795;">🛡️ Anti-Distraction Rule Activated:</strong><br>` +
+                      `• <strong>Action:</strong> Use extensions or tab groups to keep only the resources strictly necessary for the current task.<br>` +
+                      `• <strong>Benefit:</strong> Reduces visual stress and saves memory resources on your computer.`
+                    : `<strong style="color: #319795;">🛡️ Regla Antidistracciones Activada:</strong><br>` +
+                      `• <strong>Acción:</strong> Usar extensiones o grupos de pestañas para conservar solo los recursos estrictamente necesarios para la tarea actual.<br>` +
+                      `• <strong>Beneficio:</strong> Reduce el estrés visual y ahorra recursos de memoria en tu equipo de cómputo.`;
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

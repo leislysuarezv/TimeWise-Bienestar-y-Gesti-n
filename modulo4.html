@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 4: Bienestar | TimeWise</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Estilo adaptable para evitar recortes en celulares y tablets */
+        .layout-responsive {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        @media (max-width: 900px) {
+            .layout-responsive {
+                grid-template-columns: 1fr !important;
+            }
+            .sidebar-modulo {
+                display: none !important; /* Oculta el índice lateral en móviles para ganar espacio */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="logo">
+            🌿 TimeWise <span class="badge-bienestar" data-es="Módulo 4" data-en="Module 4">Módulo 4</span>
+        </div>
+        
+        <button class="btn-hamburguesa" onclick="alternarMenuMovil()" aria-label="Abrir menú">☰</button>
+
+        <nav class="navegacion" id="menu-navegacion">
+            <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+            
+            <div class="menu-desplegable">
+                <span class="enlace-desplegable" data-es="Módulos ▾" data-en="Modules ▾">Módulos ▾</span>
+                <div class="contenido-desplegable">
+                    <a href="modulo1.html" data-es="Módulo 1: Fundamentos" data-en="Module 1: Fundamentals">Módulo 1: Fundamentos</a>
+                    <a href="modulo2.html" data-es="Módulo 2: Técnicas" data-en="Module 2: Techniques">Module 2: Techniques</a>
+                    <a href="modulo3.html" data-es="Módulo 3: Herramientas" data-en="Module 3: Tools">Module 3: Tools</a>
+                    <a href="modulo4.html" data-es="Módulo 4: Bienestar" data-en="Module 4: Wellness">Module 4: Wellness</a>
+                    <a href="modulo5.html" data-es="Módulo 5: Hábitos" data-en="Module 5: Habits">Module 5: Habits</a>
+                </div>
+            </div>
+
+            <a href="rutina.html" data-es="Planificador" data-en="Planner">Planner</a>
+            <a href="creditos.html" data-es="Créditos" data-en="Credits">Créditos</a>
+        </nav>
+
+        <div class="selector-idioma">
+            <button onclick="cambiarIdioma('es')">ES</button>
+            <button onclick="cambiarIdioma('en')">EN</button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL CON DISEÑO ADAPTABLE -->
+    <main class="contenedor-principal layout-responsive">
+        
+        <!-- BARRA LATERAL / ÍNDICE DEL MÓDULO (Se oculta automáticamente en móviles) -->
+        <aside class="sidebar-modulo" style="background: white; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; position: sticky; top: 90px; height: fit-content;">
+            <h4 style="color: #2f855a; margin-top: 0; margin-bottom: 15px; font-size: 16px; border-bottom: 2px solid #e6fffa; padding-bottom: 8px;" data-es="Contenido Módulo 4" data-en="Module 4 Contents">Contenido Módulo 4</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px;">
+                <li style="margin-bottom: 12px;"><a href="#subtema1" style="color: #4a5568; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #f8fafc;" data-es="4.1 Gestión del Estrés" data-en="4.1 Stress Management">📌 4.1 Gestión del Estrés</a></li>
+                <li style="margin-bottom: 12px;"><a href="#subtema2" style="color: #4a5568; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #f8fafc;" data-es="4.2 Descanso y Pausas" data-en="4.2 Rest and Breaks">🌿 4.2 Descanso y Pausas</a></li>
+                <li style="margin-bottom: 8px;"><a href="#ejercicio-bienestar" style="color: #2f855a; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #e6fffa; font-weight: 600;" data-es="⚙️ Reto: Pausa Activa" data-en="⚙️ Challenge: Active Break">⚙️ Reto: Pausa Activa</a></li>
+                <li><a href="#temporizador-descanso" style="color: #2f855a; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #e6fffa; font-weight: 600;" data-es="⏱️ Temporizador Pausa" data-en="⏱️ Break Timer">⏱️ Temporizador Pausa</a></li>
+            </ul>
+        </aside>
+
+        <!-- SECCIÓN CENTRAL DE CONTENIDOS -->
+        <div>
+            <!-- ENLACE DE RETORNO AL INICIO -->
+            <div style="margin-bottom: 20px;">
+                <a href="index.html" style="color: #2f855a; text-decoration: none; font-weight: 600; font-size: 14px;" data-es="← Volver al inicio" data-en="← Back to home">← Volver al inicio</a>
+            </div>
+
+            <!-- SUBTEMA 4.1 CON TARJETAS INTERACTIVAS -->
+            <section id="subtema1" class="tarjeta-modulo" style="margin-bottom: 30px; border-left: 5px solid #2f855a;">
+                <div style="margin-bottom: 15px;">
+                    <span style="background: #e6fffa; color: #2c7a7b; font-size: 12px; padding: 6px 14px; border-radius: 20px; font-weight: 600; display: inline-block;" data-es="Lección 4.1" data-en="Subtopic 4.1">Bloque 4.1</span>
+                </div>
+                
+                <h1 style="font-size: 24px; color: #1a202c; margin-top: 5px; margin-bottom: 10px;" 
+                    data-es="Gestión del estrés y prevención del burnout académico" 
+                    data-en="Stress management and academic burnout prevention">
+                    Gestión del estrés y prevención del burnout académico
+                </h1>
+
+                <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;" 
+                   data-es="Identifica las señales tempranas de saturación mental durante las semanas de alta exigencia universitaria. Implementa estrategias de equilibrio emocional para proteger tu motivación y creatividad." 
+                   data-en="Identify early signs of mental saturation during weeks of high university demand. Implement emotional balance strategies to protect your motivation and creativity.">
+                   Identifica las señales tempranas de saturación mental durante las semanas de alta exigencia universitaria. Implementa estrategias de equilibrio emocional para proteger tu motivación y creatividad.
+                </p>
+
+                <!-- IMAGEN ILUSTRATIVA SUBTEMA 4.1 -->
+                <div style="margin-bottom: 25px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Bienestar y calma mental" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <div onclick="desplegarDetalle('detalleMod4_1')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="🧠 Carga Mental y Límites" data-en="🧠 Mental Load & Limits">🧠 Carga Mental y Límites</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Identifica los síntomas tempranos de fatiga cognitiva y saturación." data-en="Identify early symptoms of cognitive fatigue and saturation.">Identifica los síntomas tempranos de fatiga cognitiva y saturación.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod4_1" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Tip de Bienestar):" data-en="💡 Learn more (Wellness Tip):">💡 Saber más (Tip de Bienestar):</strong> 
+                            <span data-es="Aprender a decir 'no' a sobrecargas innecesarias protege tu creatividad a largo plazo en carreras exigentes." data-en="Learning to say 'no' to unnecessary overloads protects your long-term creativity in demanding majors.">Aprender a decir "no" a sobrecargas innecesarias protege tu creatividad a largo plazo en carreras exigentes.</span>
+                        </div>
+                    </div>
+
+                    <div onclick="desplegarDetalle('detalleMod4_2')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="🌬️ Pausas de Respiración" data-en="🌬️ Breathing Breaks">🌬️ Pausas de Respiración</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Ejercicios breves de respiración consciente para reducir la ansiedad." data-en="Short conscious breathing exercises to reduce anxiety.">Ejercicios breves de respiración consciente para reducir la ansiedad.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod4_2" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Tip de Bienestar):" data-en="💡 Learn more (Wellness Tip):">💡 Saber más (Tip de Bienestar):</strong> 
+                            <span data-es="Realiza ciclos de respiración profunda (inhalar en 4s, sostener 4s, exhalar en 4s) antes de iniciar tareas complejas." data-en="Perform deep breathing cycles (inhale for 4s, hold for 4s, exhale for 4s) before starting complex tasks.">Realiza ciclos de respiración profunda (inhalar en 4s, sostener 4s, exhalar en 4s) antes de iniciar tareas complejas.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SUBTEMA 4.2 CON TARJETAS INTERACTIVAS -->
+            <section id="subtema2" class="tarjeta-modulo" style="margin-bottom: 30px; border-left: 5px solid #319795;">
+                <div style="margin-bottom: 15px;">
+                    <span style="background: #e6fffa; color: #2c7a7b; font-size: 12px; padding: 6px 14px; border-radius: 20px; font-weight: 600; display: inline-block;" data-es="Lección 4.2" data-en="Subtopic 4.2">Bloque 4.2</span>
+                </div>
+                
+                <h2 style="font-size: 24px; color: #1a202c; margin-top: 5px; margin-bottom: 10px;" 
+                    data-es="Higiene del sueño y recuperación física" 
+                    data-en="Sleep hygiene and physical recovery">
+                    Higiene del sueño y recuperación física
+                </h2>
+
+                <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;" 
+                   data-es="Comprende la relación directa entre el descanso nocturno adecuado y la consolidación de la memoria a largo plazo. Optimiza tus horas de sueño para rendir al máximo en tus proyectos." 
+                   data-en="Understand the direct relationship between adequate nighttime rest and long-term memory consolidation. Optimize your sleeping hours to perform at your best in your projects.">
+                   Comprende la relación directa entre el descanso nocturno adecuado y la consolidación de la memoria a largo plazo. Optimiza tus horas de sueño para rendir al máximo en tus proyectos.
+                </p>
+
+                <!-- IMAGEN ILUSTRATIVA SUBTEMA 4.2 -->
+                <div style="margin-bottom: 25px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Estudiante descansando y durmiendo plácidamente" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <div onclick="desplegarDetalle('detalleMod4_3')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="🌙 Desconexión Nocturna" data-en="🌙 Nighttime Disconnection">🌙 Desconexión Nocturna</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Evita pantallas y luces azules al menos 45 minutos antes de dormir." data-en="Avoid screens and blue light at least 45 minutes before sleep.">Evita pantallas y luces azules al menos 45 minutos antes de dormir.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod4_3" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Clave):" data-en="💡 Learn more (Key):">💡 Saber más (Clave):</strong> 
+                            <span data-es="Un sueño de calidad mejora directamente la capacidad de resolución de problemas lógicos y diseño gráfico." data-en="Quality sleep directly improves logical problem-solving and graphic design capabilities.">Un sueño de calidad mejora directamente la capacidad de resolución de problemas lógicos y diseño gráfico.</span>
+                        </div>
+                    </div>
+
+                    <div onclick="desplegarDetalle('detalleMod4_4')" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; cursor: pointer; transition: border-color 0.2s;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="💤 Ciclos de Descanso" data-en="💤 Rest Cycles">💤 Ciclos de Descanso</h4>
+                        <p style="font-size: 14px; color: #4a5568;" data-es="Respeta bloques de sueño de 7 a 8 horas para fijar los aprendizajes." data-en="Respect sleep blocks of 7 to 8 hours to anchor learnings.">Respeta bloques de sueño de 7 a 8 horas para fijar los aprendizajes.</p>
+                        <p style="font-size: 12px; color: #2f855a; font-weight: 600; margin-top: 10px;" data-es="👉 Haz clic para saber más" data-en="👉 Click to know more">👉 Haz clic para saber más</p>
+                        
+                        <div id="detalleMod4_4" style="display: none; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0; font-size: 13px; color: #2f855a;">
+                            <strong data-es="💡 Saber más (Clave):" data-en="💡 Learn more (Key):">💡 Saber más (Clave):</strong> 
+                            <span data-es="Durante el sueño profundo, el cerebro procesa y archiva la información técnica adquirida durante el día." data-en="During deep sleep, the brain processes and archives technical information acquired during the day.">Durante el sueño profundo, el cerebro procesa y archiva la información técnica adquirida durante el día.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EJERCICIO 1: GENERADOR DE PAUSA ACTIVA -->
+            <section id="ejercicio-bienestar" class="tarjeta-modulo" style="background: #f7fafc; border: 1px solid #e2e8f0; border-top: 5px solid #2f855a; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
+                <h3 style="color: #2f855a; margin-top: 0; margin-bottom: 10px;" data-es="⚙️ Ejercicio Práctico: Generador de Pausa Activa" data-en="⚙️ Practical Exercise: Active Break Generator">⚙️ Ejercicio Práctico: Generador de Pausa Activa</h3>
+                <p style="font-size: 14px; color: #4a5568; margin-bottom: 20px;" data-es="Selecciona cuánto tiempo tienes disponible para recargar energía mental antes de seguir con tus deberes académicos." data-en="Select how much time you have available to recharge mental energy before continuing with your academic duties.">Selecciona cuánto tiempo tienes disponible para recargar energía mental antes de seguir con tus deberes académicos.</p>
+                
+                <div style="display: flex; gap: 10px; flex-direction: column; margin-bottom: 15px;">
+                    <label style="font-size: 14px; font-weight: 600; color: #2d3748;" data-es="Tiempo disponible para pausa:" data-en="Available time for break:">Tiempo disponible para pausa:</label>
+                    <select id="select-tiempo-pausa" style="padding: 10px; border: 1px solid #cbd5e0; border-radius: 6px; font-size: 14px; width: 100%; box-sizing: border-box;">
+                        <option value="5min" data-es="5 minutos (Respiración y estiramiento express)" data-en="5 minutes (Breathing and express stretching)">5 minutos (Respiración y estiramiento express)</option>
+                        <option value="15min" data-es="15 minutos (Desconexión visual y caminata corta)" data-en="15 minutes (Visual disconnection and short walk)">15 minutos (Desconexión visual y caminata corta)</option>
+                        <option value="30min" data-es="30 minutos (Recuperación física e hidratación)" data-en="30 minutes (Physical recovery and hydration)">30 minutos (Recuperación física e hidratación)</option>
+                    </select>
+                    <button onclick="generarPausaActiva()" style="background: #2f855a; color: white; border: none; padding: 9px 18px; border-radius: 6px; font-weight: 600; cursor: pointer; align-self: flex-start;" data-es="Iniciar Pausa Recomendada" data-en="Start Recommended Break">Iniciar Pausa Recomendada</button>
+                </div>
+
+                <div id="resultado-pausa" style="background: white; padding: 15px; border-radius: 8px; border: 1px dashed #cbd5e0; font-size: 14px; color: #4a5568; display: none;">
+                    <!-- Resultado dinámico -->
+                </div>
+            </section>
+
+            <!-- EJERCICIO 2: TEMPORIZADOR DE DESCANSO INTERACTIVO -->
+            <section id="temporizador-descanso" class="tarjeta-modulo" style="background: #f7fafc; border: 1px solid #e2e8f0; border-top: 5px solid #319795; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
+                <h3 style="color: #319795; margin-top: 0; margin-bottom: 10px;" data-es="⏱️ Herramienta Interactiva: Temporizador de Pausa" data-en="⏱️ Interactive Tool: Break Timer">⏱️ Herramienta Interactiva: Temporizador de Pausa</h3>
+                <p style="font-size: 14px; color: #4a5568; margin-bottom: 20px;" data-es="Configura un temporizador rápido en pantalla para desconectar de tus deberes por unos minutos sin perder el control del tiempo." data-en="Set a quick screen timer to disconnect from your duties for a few minutes without losing track of time.">Configura un temporizador rápido en pantalla para desconectar de tus deberes por unos minutos sin perder el control del tiempo.</p>
+                
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                    <button onclick="configurarTemporizador(300)" style="background: #319795; color: white; border: none; padding: 8px 14px; border-radius: 6px; font-weight: 600; cursor: pointer;" data-es="5 Minutos" data-en="5 Minutes">5 Minutos</button>
+                    <button onclick="configurarTemporizador(600)" style="background: #319795; color: white; border: none; padding: 8px 14px; border-radius: 6px; font-weight: 600; cursor: pointer;" data-es="10 Minutos" data-en="10 Minutes">10 Minutos</button>
+                    <button onclick="configurarTemporizador(900)" style="background: #319795; color: white; border: none; padding: 8px 14px; border-radius: 6px; font-weight: 600; cursor: pointer;" data-es="15 Minutos" data-en="15 Minutes">15 Minutos</button>
+                </div>
+
+                <div style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #cbd5e0; text-align: center;">
+                    <div id="display-tiempo" style="font-size: 42px; font-weight: bold; color: #2d3748; margin-bottom: 15px;">05:00</div>
+                    <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                        <button onclick="iniciarTemporizador()" style="background: #2f855a; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; cursor: pointer;" data-es="▶️ Iniciar" data-en="▶️ Start">▶️ Iniciar</button>
+                        <button onclick="pausarTemporizador()" style="background: #dd6b20; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; cursor: pointer;" data-es="⏸️ Pausar" data-en="⏸️ Pause">⏸️ Pausar</button>
+                        <button onclick="reiniciarTemporizador()" style="background: #e2e8f0; color: #4a5568; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; cursor: pointer;" data-es="🔄 Reiniciar" data-en="🔄 Reset">🔄 Reiniciar</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NAVEGACIÓN INFERIOR -->
+            <div style="display: flex; justify-content: space-between; margin-top: 30px; flex-wrap: wrap; gap: 10px;">
+                <a href="modulo3.html" class="btn-principal" data-es="← Módulo 3" data-en="← Module 3">← Módulo 3</a>
+                <a href="modulo5.html" class="btn-principal" data-es="Módulo 5 →" data-en="Module 5 →">Módulo 5 →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p data-es="Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia" data-en="National Open and Distance University - UNAD | Multimedia Engineering">
+            Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia
+        </p>
+    </footer>
+
+    <!-- SCRIPT DE INTERACTIVIDAD ESPECÍFICO -->
+    <script>
+        function desplegarDetalle(id) {
+            const elemento = document.getElementById(id);
+            if (!elemento) return;
+            if (elemento.style.display === "none" || elemento.style.display === "") {
+                elemento.style.display = "block";
+            } else {
+                elemento.style.display = "none";
+            }
+        }
+
+        function generarPausaActiva() {
+            let tiempo = document.getElementById('select-tiempo-pausa').value;
+            let contenedor = document.getElementById('resultado-pausa');
+            if (!contenedor) return;
+            contenedor.style.display = 'block';
+            const idiomaActual = localStorage.getItem('idiomaTimeWise') || 'es';
+
+            if (tiempo === '5min') {
+                contenedor.innerHTML = idiomaActual === 'en'
+                    ? `<strong style="color: #2f855a;">🌿 5-Minute Routine:</strong><br>` +
+                      `1. Perform 3 deep diaphragmatic breathing cycles.<br>` +
+                      `2. Stretch your arms upward and relax your shoulders and neck.<br>` +
+                      `3. Apply the 20-20-20 rule: look at a point 20 feet away for 20 seconds to rest your eyes from the screen.`
+                    : `<strong style="color: #2f855a;">🌿 Rutina de 5 Minutos:</strong><br>` +
+                      `1. Realiza 3 ciclos de respiración diafragmática profunda.<br>` +
+                      `2. Estira los brazos hacia arriba y relaja hombros y cuello.<br>` +
+                      `3. Aplica la regla 20-20-20: mira un punto a 20 pies de distancia durante 20 segundos para relajar la vista de la pantalla.`;
+            } else if (tiempo === '15min') {
+                contenedor.innerHTML = idiomaActual === 'en'
+                    ? `<strong style="color: #2f855a;">🌿 15-Minute Routine:</strong><br>` +
+                      `1. Stand up from your chair and step away completely from screens.<br>` +
+                      `2. Walk around your space or stretch your legs and lower back.<br>` +
+                      `3. Drink a glass of fresh water to rehydrate your body and clear your mind.`
+                    : `<strong style="color: #2f855a;">🌿 Rutina de 15 Minutos:</strong><br>` +
+                      `1. Levántate de la silla y aléjate por completo de las pantallas.<br>` +
+                      `2. Camina por tu espacio o haz estiramientos de piernas y espalda baja.<br>` +
+                      `3. Bebe un vaso de agua fresca para rehidratar el cuerpo y despejar la mente.`;
+            } else {
+                contenedor.innerHTML = idiomaActual === 'en'
+                    ? `<strong style="color: #2f855a;">🌿 30-Minute Routine:</strong><br>` +
+                      `1. Have a light, healthy snack free of processed sugars.<br>` +
+                      `2. Take a brief walk outdoors or change your physical environment.<br>` +
+                      `3. Allow your mind to rest from academic pending tasks before your next creative block.`
+                    : `<strong style="color: #2f855a;">🌿 Rutina de 30 Minutos:</strong><br>` +
+                      `1. Toma un refrigerio ligero y saludable libre de azúcares procesados.<br>` +
+                      `2. Realiza una caminata breve al aire libre o cambia de ambiente físico.<br>` +
+                      `3. Permite que tu mente descanse de pendientes académicos antes del siguiente bloque creativo.`;
+            }
+        }
+
+        // Lógica del Temporizador de Descanso
+        let tiempoRestantePausa = 300; 
+        let temporizadorIntervaloPausa = null;
+        let enEjecucionPausa = false;
+
+        function actualizarDisplayPausa() {
+            let minutos = Math.floor(tiempoRestantePausa / 60);
+            let segundos = tiempoRestantePausa % 60;
+            let displayMin = minutos < 10 ? '0' + minutos : minutos;
+            let displaySeg = segundos < 10 ? '0' + segundos : segundos;
+            let displayEl = document.getElementById('display-tiempo');
+            if (displayEl) displayEl.innerText = `${displayMin}:${displaySeg}`;
+        }
+
+        function configurarTemporizador(segundos) {
+            pausarTemporizador();
+            tiempoRestantePausa = segundos;
+            actualizarDisplayPausa();
+        }
+
+        function iniciarTemporizador() {
+            if (enEjecucionPausa) return;
+            enEjecucionPausa = true;
+            temporizadorIntervaloPausa = setInterval(() => {
+                if (tiempoRestantePausa > 0) {
+                    tiempoRestantePausa--;
+                    actualizarDisplayPausa();
+                } else {
+                    pausarTemporizador();
+                    const idiomaActual = localStorage.getItem('idiomaTimeWise') || 'es';
+                    alert(idiomaActual === 'en' ? "Break time completed! It's time to return to your projects with energy." : "¡Tiempo de pausa cumplido! Es momento de regresar con energía a tus proyectos.");
+                }
+            }, 1000);
+        }
+
+        function pausarTemporizador() {
+            enEjecucionPausa = false;
+            clearInterval(temporizadorIntervaloPausa);
+        }
+
+        function reiniciarTemporizador() {
+            pausarTemporizador();
+            tiempoRestantePausa = 300;
+            actualizarDisplayPausa();
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

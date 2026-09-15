@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificador Interactivo | TimeWise</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+   <header class="encabezado">
+    <div class="logo">
+        🌿 TimeWise <span class="badge-bienestar" data-es="Bienestar UNAD" data-en="UNAD Wellness">Bienestar UNAD</span>
+    </div>
+    
+    <!-- Botón Hamburguesa para Móviles -->
+    <button class="btn-hamburguesa" onclick="alternarMenuMovil()" aria-label="Abrir menú">
+        ☰
+    </button>
+
+    <nav class="navegacion" id="menu-navegacion">
+        <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+        
+        <!-- MENÚ DESPLEGABLE DE MÓDULOS -->
+        <div class="menu-desplegable">
+            <span class="enlace-desplegable" data-es="Módulos ▾" data-en="Modules ▾">Módulos ▾</span>
+            <div class="contenido-desplegable">
+                <a href="modulo1.html" data-es="Módulo 1: Fundamentos" data-en="Module 1: Fundamentals">Módulo 1: Fundamentos</a>
+                <a href="modulo2.html" data-es="Módulo 2: Técnicas" data-en="Module 2: Techniques">Module 2: Techniques</a>
+                <a href="modulo3.html" data-es="Módulo 3: Herramientas" data-en="Module 3: Tools">Module 3: Tools</a>
+                <a href="modulo4.html" data-es="Módulo 4: Bienestar" data-en="Module 4: Wellness">Module 4: Wellness</a>
+                <a href="modulo5.html" data-es="Módulo 5: Hábitos" data-en="Module 5: Habits">Module 5: Habits</a>
+            </div>
+        </div>
+
+        <a href="rutina.html" data-es="Planificador" data-en="Planner">Planner</a>
+        <a href="creditos.html" data-es="Créditos" data-en="Credits">Créditos</a>
+    </nav>
+
+    <div class="selector-idioma">
+        <button onclick="cambiarIdiomaPersonalizado('es')">ES</button>
+        <button onclick="cambiarIdiomaPersonalizado('en')">EN</button>
+    </div>
+</header>
+
+    <!-- CONTENIDO PRINCIPAL DEL PLANIFICADOR -->
+    <main class="contenedor-principal">
+        
+        <div class="migas-pan">
+            <a href="index.html" data-es="← Volver al inicio" data-en="← Back to home">← Volver al inicio</a>
+        </div>
+
+        <section class="seccion-contenido">
+            
+            <span class="etiqueta-hero" data-es="Herramienta Interactiva" data-en="Interactive Tool">Herramienta Interactiva</span>
+            
+            <h1 data-es="Planificador de Rutinas y Hábitos de Estudio" 
+                data-en="Routine and Study Habits Planner">
+                Planificador de Rutinas y Hábitos de Estudio
+            </h1>
+
+            <p class="texto-explicativo" 
+               data-es="Organiza tu jornada académica agregando bloques de estudio o actividades de bienestar. Esta herramienta te ayuda a visualizar tus pendientes diarios para evitar el estrés y mantener el enfoque." 
+               data-en="Organize your academic day by adding study blocks or wellness activities. This tool helps you visualize your daily tasks to avoid stress and maintain focus.">
+               Organiza tu jornada académica agregando bloques de estudio o actividades de bienestar. Esta herramienta te ayuda a visualizar tus pendientes diarios para evitar el estrés y mantener el enfoque.
+            </p>
+
+            <!-- IMAGEN DE CALENDARIO / AGENDA -->
+            <div style="margin: 20px 0 30px 0; text-align: center;">
+                <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1000&q=80" alt="Estudiante organizando sus metas y calendario" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+            </div>
+
+            <!-- FORMULARIO PARA AGREGAR ACTIVIDADES -->
+            <div class="caja-interactiva" style="background-color: #f7fafc; border-color: #e2e8f0;">
+                <h3 data-es="✏️ Agregar nuevo bloque a tu día" data-en="✏️ Add new block to your day">✏️ Agregar nuevo bloque a tu día</h3>
+                
+                <form id="form-rutina" onsubmit="agregarActividad(event)" style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+                    <div>
+                        <label style="display: block; font-size: 13px; font-weight: 600; color: #4a5568; margin-bottom: 5px;" data-es="Hora o Bloque Temporal:" data-en="Time or Block:">Hora o Bloque Temporal:</label>
+                        <input type="text" id="input-hora" placeholder="Ej. 08:00 AM - 10:00 AM" 
+                               data-es-placeholder="Ej. 08:00 AM - 10:00 AM" 
+                               data-en-placeholder="E.g. 08:00 AM - 10:00 AM" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e0; font-size: 14px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-size: 13px; font-weight: 600; color: #4a5568; margin-bottom: 5px;" data-es="Actividad Académica / Descanso:" data-en="Academic Activity / Rest:">Actividad Académica / Descanso:</label>
+                        <input type="text" id="input-actividad" placeholder="Ej. Estudio de Ingeniería Multimedia / Pausa activa" 
+                               data-es-placeholder="Ej. Estudio de Ingeniería Multimedia / Pausa activa" 
+                               data-en-placeholder="E.g. Multimedia Engineering study / Active break" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e0; font-size: 14px;">
+                    </div>
+
+                    <button type="submit" class="btn-principal" style="align-self: flex-start; cursor: pointer; border: none;" data-es="+ Añadir a mi rutina" data-en="+ Add to my routine">+ Añadir a mi rutina</button>
+                </form>
+            </div>
+
+            <!-- TABLA / LISTA DE ACTIVIDADES REGISTRADAS -->
+            <div style="margin-top: 35px;">
+                <h3 style="color: #2d3748; font-size: 20px; margin-bottom: 15px;" data-es="📋 Tu rutina organizada del día" data-en="📋 Your organized daily routine">📋 Tu rutina organizada del día</h3>
+                
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                        <thead>
+                            <tr style="background-color: #2f855a; color: white; text-align: left;">
+                                <th style="padding: 12px 15px; font-size: 14px;" data-es="Horario" data-en="Schedule">Horario</th>
+                                <th style="padding: 12px 15px; font-size: 14px;" data-es="Actividad" data-en="Activity">Actividad</th>
+                                <th style="padding: 12px 15px; font-size: 14px; text-align: center;" data-es="Acciones" data-en="Actions">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-rutina">
+                            <!-- Filas de ejemplo iniciales con soporte bilingüe -->
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td style="padding: 12px 15px; font-size: 14px; color: #4a5568;">07:00 AM - 08:00 AM</td>
+                                <td style="padding: 12px 15px; font-size: 14px; color: #2d3748;" data-es="Preparación matutina y desayuno consciente 🍃" data-en="Morning preparation and mindful breakfast 🍃">Preparación matutina y desayuno consciente 🍃</td>
+                                <td style="padding: 12px 15px; text-align: center;">
+                                    <button onclick="eliminarFila(this)" style="background: #fed7d7; color: #c53030; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 12px;" data-es="Eliminar" data-en="Delete">Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td style="padding: 12px 15px; font-size: 14px; color: #4a5568;">09:00 AM - 11:00 AM</td>
+                                <td style="padding: 12px 15px; font-size: 14px; color: #2d3748;" data-es="Bloque Pomodoro: Lecturas universitarias y apuntes 📚" data-en="Pomodoro Block: University readings and notes 📚">Bloque Pomodoro: Lecturas universitarias y apuntes 📚</td>
+                                <td style="padding: 12px 15px; text-align: center;">
+                                    <button onclick="eliminarFila(this)" style="background: #fed7d7; color: #c53030; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 12px;" data-es="Eliminar" data-en="Delete">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- NAVEGACIÓN INFERIOR Y BOTÓN DE IMPRESIÓN -->
+            <div class="navegacion-paginas" style="display: flex; justify-content: space-between; align-items: center; margin-top: 30px; flex-wrap: wrap; gap: 15px;">
+                <button onclick="window.print()" style="background: #2b6cb0; color: white; border: none; padding: 10px 18px; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px;" data-es="🖨️ Imprimir / Guardar PDF" data-en="🖨️ Print / Save PDF">
+                    🖨️ Imprimir / Guardar PDF
+                </button>
+            </div>
+
+            <!-- NAVEGACIÓN INFERIOR -->
+            <div class="navegacion-paginas" style="display: flex; justify-content: space-between; align-items: center; margin-top: 30px;">
+                <a href="modulo5.html" class="btn-secundario" data-es="← Módulo 5" data-en="← Module 5">← Módulo 5</a>
+                <a href="creditos.html" class="btn-principal" data-es="Créditos →" data-en="Credits →">Créditos →</a>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p data-es="Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia" data-en="National Open and Distance University - UNAD | Multimedia Engineering">
+            Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia
+        </p>
+    </footer>
+
+    <!-- SCRIPT ESPECÍFICO PARA EL PLANIFICADOR -->
+    <script>
+        function agregarActividad(event) {
+            event.preventDefault();
+            
+            const hora = document.getElementById('input-hora').value;
+            const actividad = document.getElementById('input-actividad').value;
+            const tbody = document.getElementById('lista-rutina');
+
+            const nuevaFila = document.createElement('tr');
+            nuevaFila.style.borderBottom = "1px solid #e2e8f0";
+            
+            const textoEliminarES = "Eliminar";
+            const textoEliminarEN = "Delete";
+
+            nuevaFila.innerHTML = `
+                <td style="padding: 12px 15px; font-size: 14px; color: #4a5568;">${hora}</td>
+                <td style="padding: 12px 15px; font-size: 14px; color: #2d3748;" data-es="${actividad}" data-en="${actividad}">${actividad}</td>
+                <td style="padding: 12px 15px; text-align: center;">
+                    <button onclick="eliminarFila(this)" style="background: #fed7d7; color: #c53030; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 12px;" data-es="${textoEliminarES}" data-en="${textoEliminarEN}">${textoEliminarES}</button>
+                </td>
+            `;
+
+            tbody.appendChild(nuevaFila);
+
+            // Limpiar formulario
+            document.getElementById('input-hora').value = '';
+            document.getElementById('input-actividad').value = '';
+        }
+
+        function eliminarFila(boton) {
+            const fila = boton.closest('tr');
+            fila.remove();
+        }
+
+        // Función personalizada para traducir también los placeholders de los inputs
+        function cambiarIdiomaPersonalizado(idioma) {
+            // Llama a la función original de tu script.js si existe
+            if (typeof cambiarIdioma === 'function') {
+                cambiarIdioma(idioma);
+            }
+
+            // Traduce los placeholders de los inputs específicos del planificador
+            const inputs = document.querySelectorAll('[data-es-placeholder]');
+            inputs.forEach(input => {
+                if (idioma === 'en') {
+                    input.placeholder = input.getAttribute('data-en-placeholder');
+                } else {
+                    input.placeholder = input.getAttribute('data-es-placeholder');
+                }
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
