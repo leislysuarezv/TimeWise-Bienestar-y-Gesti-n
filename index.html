@@ -70,6 +70,30 @@
 
         </section>
 
+        <!-- SECCIÓN DE PROGRESO Y GAMIFICACIÓN (Centrada y Compacta) -->
+        <section style="background: #f4f6f9; border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px 20px; max-width: 700px; margin: 0 auto 30px auto; text-align: left; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                <h4 style="margin: 0; color: #2d3748; font-size: 1rem;" data-es="📊 Tu Progreso en TimeWise" data-en="📊 Your Progress in TimeWise">📊 Tu Progreso en TimeWise</h4>
+                <div>
+                    <span id="progress-text" data-es="Módulos completados: 5 de 5 (100%)" data-en="Completed modules: 5 of 5 (100%)" style="font-size: 12px; font-weight: 600; color: #3182ce; margin-right: 10px;">Módulos completados: 5 de 5 (100%)</span>
+                    <button onclick="reiniciarProgreso()" style="background: #e53e3e; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 11px;" data-es="Reiniciar" data-en="Reset">Reiniciar</button>
+                </div>
+            </div>
+            
+            <div style="background: #e2e8f0; border-radius: 6px; height: 8px; width: 100%; overflow: hidden; margin-bottom: 10px;">
+                <div id="progress-bar-fill" style="background: #3182ce; height: 100%; width: 100%; border-radius: 6px; transition: width 0.4s ease;"></div>
+            </div>
+
+            <div class="badges-wrapper" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 5px;">
+                <span style="background: #e2e8f0; color: #718096; padding: 4px 10px; border-radius: 15px; font-size: 0.75rem; font-weight: 600;" data-es="🏆 Iniciado" data-en="🏆 Started">🏆 Iniciado</span>
+                <span style="background: #e2e8f0; color: #718096; padding: 4px 10px; border-radius: 15px; font-size: 0.75rem; font-weight: 600;" data-es="⏱️ Maestro Pomodoro" data-en="⏱️ Pomodoro Master">⏱️ Maestro Pomodoro</span>
+                <span style="background: #e2e8f0; color: #718096; padding: 4px 10px; border-radius: 15px; font-size: 0.75rem; font-weight: 600;" data-es="🎯 Planificador Pro" data-en="🎯 Pro Planner">🎯 Planificador Pro</span>
+            </div>
+
+            <!-- Mensaje de felicitaciones oculto hasta completar el 100% -->
+            <div id="mensaje-felicitaciones" style="display: none; background: #c6f6d5; color: #22543d; padding: 8px 12px; border-radius: 6px; font-weight: 600; margin-top: 8px; text-align: center; font-size: 12px;"></div>
+        </section>
+
         <!-- MÓDULOS DE APRENDIZAJE -->
         <section class="seccion-modulos">
             <div class="titulo-seccion">
@@ -146,11 +170,10 @@
 
     <!-- PIE DE PÁGINA -->
     <footer>
-        <p data-es="Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia | Bienestar Estudiantil" data-en="National Open and Distance University - UNAD | Multimedia Engineering | Student Welfare">
-            Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia | Bienestar Estudiantil
-        </p>
+        <p>Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia</p>
     </footer>
 
+    <!-- Asegúrate de que script.js esté al final de todo -->
     <script src="script.js"></script>
 </body>
 </html>
