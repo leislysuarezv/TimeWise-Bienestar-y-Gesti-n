@@ -14,13 +14,17 @@ html, body {
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background-color: #f4f8f6;
+    background-color: #f8fafc;
+    /* Crea un patrón de líneas de cuadrícula muy suaves */
+    background-image: linear-gradient(to right, #edf2f7 1px, transparent 1px),
+                      linear-gradient(to bottom, #edf2f7 1px, transparent 1px);
+    background-size: 30px 30px;
     color: #2d3748;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
 
 /* =========================================================
    ENCABEZADO Y NAVEGACIÓN
