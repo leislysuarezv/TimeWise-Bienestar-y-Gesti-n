@@ -3,26 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TimeWise | Bienestar y Gestión del Tiempo - UNAD</title>
+    <title>Créditos | TimeWise</title>
     <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Estilo adaptable para evitar recortes en celulares y tablets */
+        .layout-responsive {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        @media (max-width: 900px) {
+            .layout-responsive {
+                grid-template-columns: 1fr !important;
+            }
+            .sidebar-creditos {
+                display: none !important; /* Oculta el índice lateral en móviles para ganar espacio */
+            }
+        }
+    </style>
 </head>
 <body>
 
     <!-- ENCABEZADO -->
     <header class="encabezado">
         <div class="logo">
-            🌿 TimeWise <span class="badge-bienestar">Bienestar UNAD</span>
+            🌿 TimeWise <span class="badge-bienestar" data-es="Créditos" data-en="Credits">Créditos</span>
         </div>
         
-        <!-- Botón Hamburguesa para Móviles -->
-        <button class="btn-hamburguesa" onclick="alternarMenuMovil()" aria-label="Abrir menú">
-            ☰
-        </button>
+        <button class="btn-hamburguesa" onclick="alternarMenuMovil()" aria-label="Abrir menú">☰</button>
 
         <nav class="navegacion" id="menu-navegacion">
             <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
             
-            <!-- MENÚ DESPLEGABLE DE MÓDULOS -->
             <div class="menu-desplegable">
                 <span class="enlace-desplegable" data-es="Módulos ▾" data-en="Modules ▾">Módulos ▾</span>
                 <div class="contenido-desplegable">
@@ -34,7 +47,7 @@
                 </div>
             </div>
 
-            <a href="rutina.html" data-es="Planificador" data-en="Planner">Planificador</a>
+            <a href="rutina.html" data-es="Planificador" data-en="Planner">Planner</a>
             <a href="creditos.html" data-es="Créditos" data-en="Credits">Créditos</a>
         </nav>
 
@@ -44,136 +57,137 @@
         </div>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="contenedor-principal">
+    <!-- CONTENIDO PRINCIPAL CON DISEÑO ADAPTABLE -->
+    <main class="contenedor-principal layout-responsive">
         
-        <!-- SECCIÓN HERO CON IMAGEN DESTACADA -->
-        <section class="seccion-hero" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 40px; text-align: left; margin-bottom: 40px;">
-            
-            <!-- Columna de Texto -->
-            <div style="flex: 1; min-width: 280px;">
-                <span class="etiqueta-hero" data-es="🌱 Equilibrio Académico y Salud Mental" data-en="🌱 Academic Balance and Mental Health">🌱 Equilibrio Académico y Salud Mental</span>
-                <h1 data-es="Gestiona tu tiempo sin descuidar tu bienestar" data-en="Manage your time without neglecting your well-being" style="margin-top: 15px; margin-bottom: 15px;">Gestiona tu tiempo sin descuidar tu bienestar</h1>
-                <p data-es="Un espacio interactivo diseñado para ayudarte a organizar tus semanas universitarias, reducir la procrastinación y encontrar el balance perfecto entre el estudio y el descanso." data-en="An interactive space designed to help you organize your university weeks, reduce procrastination, and find the perfect balance between study and rest." style="margin-bottom: 25px; line-height: 1.6;">
-                    Un espacio interactivo diseñado para ayudarte a organizar tus semanas universitarias, reducir la procrastinación y encontrar el balance perfecto entre el estudio y el descanso.
-                </p>
-                <div class="botones-hero" style="display: flex; flex-wrap: wrap; gap: 10px;">
-                    <a href="modulo1.html" class="btn-principal" data-es="Explorar Módulos" data-en="Explore Modules">Explorar Módulos</a>
-                    <a href="rutina.html" class="btn-secundario" data-es="Planificador Diario" data-en="Daily Planner">Planificador Diario</a>
+        <!-- BARRA LATERAL / ÍNDICE (Se oculta automáticamente en móviles) -->
+        <aside class="sidebar-creditos" style="background: white; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; position: sticky; top: 90px;">
+            <h4 style="color: #2f855a; margin-top: 0; margin-bottom: 15px; font-size: 16px; border-bottom: 2px solid #e6fffa; padding-bottom: 8px;" data-es="Contenido Créditos" data-en="Credits Contents">Contenido Créditos</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px;">
+                <li style="margin-bottom: 12px;"><a href="#autor" style="color: #4a5568; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #f8fafc;" data-es="👩‍💻 Autora y Director" data-en="👩‍💻 Author & Director">👩‍💻 Autora y Director</a></li>
+                <li style="margin-bottom: 12px;"><a href="#institucion" style="color: #4a5568; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #f8fafc;" data-es="🏛️ Marco Institucional" data-en="🏛️ Institutional Framework">🏛️ Marco Institucional</a></li>
+                <li><a href="#recursos" style="color: #4a5568; text-decoration: none; display: block; padding: 6px 10px; border-radius: 6px; background: #f8fafc;" data-es="📸 Recursos y Medios" data-en="📸 Resources & Media">📸 Recursos y Medios</a></li>
+            </ul>
+        </aside>
+
+        <!-- SECCIÓN CENTRAL DE CONTENIDOS -->
+        <div>
+            <!-- ENLACE DE RETORNO AL INICIO -->
+            <div style="margin-bottom: 20px;">
+                <a href="index.html" style="color: #2f855a; text-decoration: none; font-weight: 600; font-size: 14px;" data-es="← Volver al inicio" data-en="← Back to home">← Volver al inicio</a>
+            </div>
+
+            <!-- SECCIÓN AUTORA Y TUTOR -->
+            <section id="autor" class="tarjeta-modulo" style="margin-bottom: 30px; border-left: 5px solid #2f855a;">
+                <div style="margin-bottom: 15px;">
+                    <span style="background: #e6fffa; color: #2c7a7b; font-size: 12px; padding: 6px 14px; border-radius: 20px; font-weight: 600; display: inline-block;" data-es="Desarrollo y Dirección" data-en="Development & Direction">Desarrollo y Dirección</span>
                 </div>
-            </div>
-
-            <!-- Columna de Imagen Llamativa -->
-            <div style="flex: 1; min-width: 280px; text-align: center;">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" alt="Estudiantes universitarios colaborando y organizando su tiempo" style="width: 100%; max-height: 340px; object-fit: cover; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);">
-            </div>
-
-        </section>
-
-        <!-- SECCIÓN DE PROGRESO Y GAMIFICACIÓN (Centrada y Compacta) -->
-        <section style="background: #f4f6f9; border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px 20px; max-width: 700px; margin: 0 auto 30px auto; text-align: left; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
-                <h4 style="margin: 0; color: #2d3748; font-size: 1rem;" data-es="📊 Tu Progreso en TimeWise" data-en="📊 Your Progress in TimeWise">📊 Tu Progreso en TimeWise</h4>
-                <div>
-                    <span id="progress-text" data-es="Módulos completados: 5 de 5 (100%)" data-en="Completed modules: 5 of 5 (100%)" style="font-size: 12px; font-weight: 600; color: #3182ce; margin-right: 10px;">Módulos completados: 5 de 5 (100%)</span>
-                    <button onclick="reiniciarProgreso()" style="background: #e53e3e; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 11px;" data-es="Reiniciar" data-en="Reset">Reiniciar</button>
-                </div>
-            </div>
-            
-            <div style="background: #e2e8f0; border-radius: 6px; height: 8px; width: 100%; overflow: hidden; margin-bottom: 10px;">
-                <div id="progress-bar-fill" style="background: #3182ce; height: 100%; width: 100%; border-radius: 6px; transition: width 0.4s ease;"></div>
-            </div>
-
-            <div class="badges-wrapper" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 5px;">
-                <span style="background: #e2e8f0; color: #718096; padding: 4px 10px; border-radius: 15px; font-size: 0.75rem; font-weight: 600;" data-es="🏆 Iniciado" data-en="🏆 Started">🏆 Iniciado</span>
-                <span style="background: #e2e8f0; color: #718096; padding: 4px 10px; border-radius: 15px; font-size: 0.75rem; font-weight: 600;" data-es="⏱️ Maestro Pomodoro" data-en="⏱️ Pomodoro Master">⏱️ Maestro Pomodoro</span>
-                <span style="background: #e2e8f0; color: #718096; padding: 4px 10px; border-radius: 15px; font-size: 0.75rem; font-weight: 600;" data-es="🎯 Planificador Pro" data-en="🎯 Pro Planner">🎯 Planificador Pro</span>
-            </div>
-
-            <!-- Mensaje de felicitaciones oculto hasta completar el 100% -->
-            <div id="mensaje-felicitaciones" style="display: none; background: #c6f6d5; color: #22543d; padding: 8px 12px; border-radius: 6px; font-weight: 600; margin-top: 8px; text-align: center; font-size: 12px;"></div>
-        </section>
-
-        <!-- MÓDULOS DE APRENDIZAJE -->
-        <section class="seccion-modulos">
-            <div class="titulo-seccion">
-                <h2 data-es="Ruta de Aprendizaje y Bienestar" data-en="Learning and Wellness Path">Ruta de Aprendizaje y Bienestar</h2>
-                <p data-es="Módulos interactivos enfocados en tu rendimiento y calidad de vida como estudiante." data-en="Interactive modules focused on your performance and quality of life as a student.">Módulos interactivos enfocados en tu rendimiento y calidad de vida como estudiante.</p>
-            </div>
-
-            <!-- CUADRICULA ADAPTABLE PARA EVITAR RECORTES EN MÓVILES -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; text-align: left;">
                 
-                <!-- Módulo 1 -->
-                <a href="modulo1.html" style="text-decoration: none; color: inherit;">
-                    <div class="tarjeta-modulo" style="height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 24px; margin-bottom: 8px;">🌱</div>
-                        <h3 data-es="Módulo 1" data-en="Module 1">Módulo 1</h3>
-                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="1. ¿Por qué gestionar el tiempo?" data-en="1. Why manage time?">1. ¿Por qué gestionar el tiempo?</p>
-                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="2. Identificar distracciones" data-en="2. Identify distractions">2. Identificar distracciones</p>
-                    </div>
-                </a>
+                <h1 style="font-size: 24px; color: #1a202c; margin-top: 5px; margin-bottom: 10px;" 
+                    data-es="Créditos del Proyecto TimeWise" 
+                    data-en="TimeWise Project Credits">
+                    Créditos del Proyecto TimeWise
+                </h1>
 
-                <!-- Módulo 2 -->
-                <a href="modulo2.html" style="text-decoration: none; color: inherit;">
-                    <div class="tarjeta-modulo" style="height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 24px; margin-bottom: 8px;">⏳</div>
-                        <h3 data-es="Módulo 2" data-en="Module 2">Módulo 2</h3>
-                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="3. Técnica Pomodoro" data-en="3. Pomodoro Technique">3. Técnica Pomodoro</p>
-                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="4. Matriz de Eisenhower" data-en="4. Eisenhower Matrix">4. Matriz de Eisenhower</p>
-                    </div>
-                </a>
+                <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;" 
+                   data-es="Este sitio web multimedia interactivo fue diseñado y programado como parte de las entregas académicas del programa de Ingeniería Multimedia." 
+                   data-en="This interactive multimedia website was designed and programmed as part of the academic submissions for the Multimedia Engineering program.">
+                   Este sitio web multimedia interactivo fue diseñado y programado como parte de las entregas académicas del programa de Ingeniería Multimedia.
+                </p>
 
-                <!-- Módulo 3 -->
-                <a href="modulo3.html" style="text-decoration: none; color: inherit;">
-                    <div class="tarjeta-modulo" style="height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 24px; margin-bottom: 8px;">📱</div>
-                        <h3 data-es="Módulo 3" data-en="Module 3">Módulo 3</h3>
-                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="5. Calendarios digitales" data-en="5. Digital calendars">5. Calendarios digitales</p>
-                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="6. Notificaciones y enfoque" data-en="6. Notifications and focus">6. Notificaciones y enfoque</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+                    <div style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="👩‍💻 Estudiante / Desarrolladora" data-en="👩‍💻 Student / Developer">👩‍💻 Estudiante / Desarrolladora</h4>
+                        <p style="font-size: 15px; font-weight: 600; color: #2f855a; margin-bottom: 5px;">Leisly V. Suarez.</p>
+                        <p style="font-size: 13px; color: #718096; margin: 0;" data-es="Diseño UI/UX, maquetación web HTML/CSS, interactividad JavaScript y estructuración pedagógica." data-en="UI/UX design, HTML/CSS web layout, JavaScript interactivity, and pedagogical structuring.">Diseño UI/UX, maquetación web HTML/CSS, interactividad JavaScript y estructuración pedagógica.</p>
                     </div>
-                </a>
 
-                <!-- Módulo 4 -->
-                <a href="modulo4.html" style="text-decoration: none; color: inherit;">
-                    <div class="tarjeta-modulo" style="height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 24px; margin-bottom: 8px;">🍃</div>
-                        <h3 data-es="Módulo 4" data-en="Module 4">Módulo 4</h3>
-                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="7. Descanso y sueño saludable" data-en="7. Rest and healthy sleep">7. Descanso y sueño saludable</p>
-                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="8. Manejo del estrés académico" data-en="8. Academic stress management">8. Manejo del estrés académico</p>
+                    <div style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0;">
+                        <h4 style="color: #2d3748; margin-top: 0;" data-es="👨‍🏫 Tutor / Director del Curso" data-en="👨‍🏫 Course Tutor / Director">👨‍🏫 Tutor / Director del Curso</h4>
+                        <p style="font-size: 15px; font-weight: 600; color: #2f855a; margin-bottom: 5px;">Daniel Delgado.</p>
+                        <p style="font-size: 13px; color: #718096; margin: 0;" data-es="Acompañamiento, asesoría metodológica y evaluación de los entregables del curso." data-en="Guidance, methodological advice, and evaluation of course deliverables.">Acompañamiento, asesoría metodológica y evaluación de los entregables del curso.</p>
                     </div>
-                </a>
+                </div>
+            </section>
 
-                <!-- Módulo 5 -->
-                <a href="modulo5.html" style="text-decoration: none; color: inherit;">
-                    <div class="tarjeta-modulo" style="height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 24px; margin-bottom: 8px;">🎯</div>
-                        <h3 data-es="Módulo 5" data-en="Module 5">Módulo 5</h3>
-                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="9. Hábitos sostenibles" data-en="9. Sustainable habits">9. Hábitos sostenibles</p>
-                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="10. Evaluación y mejora" data-en="10. Evaluation and improvement">10. Evaluación y mejora</p>
-                    </div>
-                </a>
+            <!-- SECCIÓN INSTITUCIÓN -->
+            <section id="institucion" class="tarjeta-modulo" style="margin-bottom: 30px; border-left: 5px solid #319795;">
+                <div style="margin-bottom: 15px;">
+                    <span style="background: #e6fffa; color: #2c7a7b; font-size: 12px; padding: 6px 14px; border-radius: 20px; font-weight: 600; display: inline-block;" data-es="Institución Educativa" data-en="Educational Institution">Institución Educativa</span>
+                </div>
+                
+                <h2 style="font-size: 24px; color: #1a202c; margin-top: 5px; margin-bottom: 10px;" 
+                    data-es="Universidad Nacional Abierta y a Distancia" 
+                    data-en="National Open and Distance University">
+                    Universidad Nacional Abierta y a Distancia
+                </h2>
 
-                <!-- Créditos -->
-                <a href="creditos.html" style="text-decoration: none; color: inherit;">
-                    <div class="tarjeta-modulo" style="height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 24px; margin-bottom: 8px;">📌</div>
-                        <h3 data-es="Créditos y APA" data-en="Credits and APA">Créditos y APA</h3>
-                        <p style="font-size: 14px; color: #4a5568; margin: 4px 0;" data-es="Referencias bibliográficas" data-en="Bibliographic references">Referencias bibliográficas</p>
-                    </div>
-                </a>
+                <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;" 
+                   data-es="Plataforma desarrollada bajo los lineamientos académicos de educación a distancia y uso de tecnologías de la información." 
+                   data-en="Platform developed under the academic guidelines of distance education and the use of information technologies.">
+                   Plataforma desarrollada bajo los lineamientos académicos de educación a distancia y uso de tecnologías de la información.
+                </p>
 
+                <div style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0;">
+                    <h4 style="color: #2d3748; margin-top: 0;">🏛️ UNAD - ECBTI</h4>
+                    <p style="font-size: 14px; color: #4a5568; margin-bottom: 5px;" data-es="Escuela de Ciencias Básicas, Tecnología e Ingeniería." data-en="School of Basic Sciences, Technology and Engineering.">Escuela de Ciencias Básicas, Tecnología e Ingeniería.</p>
+                    <p style="font-size: 14px; color: #4a5568; margin: 0;" data-es="Programa: Ingeniería Multimedia" data-en="Program: Multimedia Engineering">Programa: Ingeniería Multimedia.</p>
+                </div>
+            </section>
+
+            <!-- SECCIÓN RECURSOS Y MEDIOS -->
+            <section id="recursos" class="tarjeta-modulo" style="margin-bottom: 30px; border-left: 5px solid #2f855a;">
+                <div style="margin-bottom: 15px;">
+                    <span style="background: #e6fffa; color: #2c7a7b; font-size: 12px; padding: 6px 14px; border-radius: 20px; font-weight: 600; display: inline-block;" data-es="Recursos Multimedia" data-en="Multimedia Resources">Recursos Multimedia</span>
+                </div>
+                
+                <h2 style="font-size: 24px; color: #1a202c; margin-top: 5px; margin-bottom: 10px;" 
+                    data-es="Atribuciones y Material Gráfico" 
+                    data-en="Attributions and Graphic Material">
+                    Atribuciones y Material Gráfico
+                </h2>
+
+                <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;" 
+                   data-es="Reconocimiento a las plataformas y librerías abiertas que facilitaron la construcción técnica y visual de este espacio web." 
+                   data-en="Acknowledgement to the platforms and open libraries that facilitated the technical and visual construction of this web space.">
+                   Reconocimiento a las plataformas y librerías abiertas que facilitaron la construcción técnica y visual de este espacio web.
+                </p>
+
+                <div style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e0; word-break: break-word;">
+                    <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: #4a5568; line-height: 1.8;">
+                        <li style="margin-bottom: 10px;" data-es="<strong>Fotografías:</strong> Banco de imágenes libre de derechos Unsplash." data-en="<strong>Photographs:</strong> Royalty-free image bank Unsplash."><strong>Fotografías:</strong> Banco de imágenes libre de derechos Unsplash.</li>
+                        <li style="margin-bottom: 10px;" data-es="<strong>Iconografía:</strong> Iconos nativos interactivos y símbolos Unicode compatibles." data-en="<strong>Iconography:</strong> Interactive native icons and compatible Unicode symbols."><strong>Iconografía:</strong> Iconos nativos interactivos y símbolos Unicode compatibles.</li>
+                        <li style="margin-bottom: 10px;" data-es="<strong>Diseño Web:</strong> Estilos adaptables basados en CSS puro (Grid y Flexbox)." data-en="<strong>Web Design:</strong> Adaptable styles based on pure CSS (Grid and Flexbox)."><strong>Diseño Web:</strong> Estilos adaptables basados en CSS puro (Grid y Flexbox).</li>
+                        <li style="margin-bottom: 10px;">
+                            <strong>Referencias Bibliográficas:</strong><br>
+                            • Covey, S. R. (2003). <em>Los 7 hábitos de la gente altamente efectiva</em>. Paidós. 
+                            <a href="https://www.colomos.ceti.mx/documentos/goe/los7HabitosGenteAltamenteEfectiva.pdf" target="_blank" style="color: #2f855a; text-decoration: none; font-weight: 600; margin-left: 5px;" data-es="[Enlace de consulta]" data-en="[Consult link]">[Enlace de consulta]</a><br>
+                            • Cirillo, F. (2018). <em>The Pomodoro Technique</em>. FC Garage. 
+                            <a href="https://books.google.co.ve/books?id=rinKDQAAQBAJ&printsec=frontcover" target="_blank" style="color: #2f855a; text-decoration: none; font-weight: 600; margin-left: 5px;" data-es="[Enlace de consulta]" data-en="[Consult link]">[Enlace de consulta]</a><br>
+                            • Maslach, C., & Leiter, M. P. (2016). Understanding the burnout experience. <em>World Psychiatry</em>. 
+                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4911784/" target="_blank" style="color: #2f855a; text-decoration: none; font-weight: 600; margin-left: 5px;" data-es="[Enlace de consulta]" data-en="[Consult link]">[Enlace de consulta]</a><br>
+                            • Clear, J. (2018). <em>Hábitos atómicos</em>. Diana. 
+                            <a href="https://librerialatina.co/wp-content/uploads/2024/04/HABITOS-ATOMICOS-JAMES-CLEAR.pdf" target="_blank" style="color: #2f855a; text-decoration: none; font-weight: 600; margin-left: 5px;" data-es="[Enlace de consulta]" data-en="[Consult link]">[Enlace de consulta]</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- NAVEGACIÓN INFERIOR -->
+            <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <a href="modulo5.html" class="btn-principal" data-es="← Módulo 5" data-en="← Module 5">← Módulo 5</a>
+                <a href="index.html" class="btn-principal" data-es="Inicio →" data-en="Home →">Inicio →</a>
             </div>
-        </section>
-
+        </div>
     </main>
 
     <!-- PIE DE PÁGINA -->
     <footer>
-        <p>Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia</p>
+        <p data-es="Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia" data-en="National Open and Distance University - UNAD | Multimedia Engineering">
+            Universidad Nacional Abierta y a Distancia - UNAD | Ingeniería Multimedia
+        </p>
     </footer>
 
-    <!-- Asegúrate de que script.js esté al final de todo -->
     <script src="script.js"></script>
 </body>
 </html>
