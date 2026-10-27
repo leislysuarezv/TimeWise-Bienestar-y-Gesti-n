@@ -78,6 +78,30 @@
                 <a href="index.html" style="color: #2f855a; text-decoration: none; font-weight: 600; font-size: 14px;" data-es="← Volver al inicio" data-en="← Back to home">← Volver al inicio</a>
             </div>
 
+            <!-- SECCIÓN DE PROGRESO Y GAMIFICACIÓN EN MÓDULO -->
+            <section style="background: #f4f6f9; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 30px; text-align: left; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
+                    <h4 style="margin: 0; color: #2d3748; font-size: 1.1rem;" data-es="📊 Tu Progreso en TimeWise" data-en="📊 Your Progress in TimeWise">📊 Tu Progreso en TimeWise</h4>
+                    <div>
+                        <span id="progress-text" style="font-size: 13px; font-weight: 600; color: #3182ce; margin-right: 10px;">Módulos completados: 1 de 5 (20%)</span>
+                        <button onclick="reiniciarProgreso()" style="background: #e53e3e; color: white; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 11px;" data-es="Reiniciar" data-en="Reset">Reiniciar</button>
+                    </div>
+                </div>
+                
+                <div style="background: #e2e8f0; border-radius: 6px; height: 10px; width: 100%; overflow: hidden; margin-bottom: 12px;">
+                    <div id="progress-bar-fill" style="background: #3182ce; height: 100%; width: 20%; border-radius: 6px; transition: width 0.4s ease;"></div>
+                </div>
+
+                <div class="badges-wrapper" style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <span style="background: #e2e8f0; color: #718096; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">🏆 Iniciado</span>
+                    <span style="background: #e2e8f0; color: #718096; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">⏱️ Maestro Pomodoro</span>
+                    <span style="background: #e2e8f0; color: #718096; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">🎯 Planificador Pro</span>
+                </div>
+
+                <!-- Mensaje de felicitaciones oculto hasta completar el 100% -->
+                <div id="mensaje-felicitaciones" style="display: none; background: #c6f6d5; color: #22543d; padding: 8px 12px; border-radius: 6px; font-weight: 600; margin-top: 10px; text-align: center; font-size: 13px;"></div>
+            </section>
+
             <!-- SUBTEMA 4.1 CON TARJETAS INTERACTIVAS -->
             <section id="subtema1" class="tarjeta-modulo" style="margin-bottom: 30px; border-left: 5px solid #2f855a;">
                 <div style="margin-bottom: 15px;">
@@ -329,5 +353,6 @@
         }
     </script>
     <script src="script.js"></script>
+    <script>registrarModuloVisto(4);</script>
 </body>
 </html>
