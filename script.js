@@ -101,3 +101,89 @@ function calcularBloques() {
               `• <strong>Tarde/Bloque Secundario (2h):</strong> Trabajos colaborativos, repasos y planificación del día siguiente.`;
     }
 }
+// --- LÓGICA DE PROGRESO Y GAMIFICACIÓN ---
+
+function registrarModuloVisto(numeroModulo) {
+    let modulosVistos = JSON.parse(localStorage.getItem('timeWise_modulos')) || [];
+    if (!modulosVistos.includes(numeroModulo)) {
+        modulosVistos.push(numeroModulo);
+        localStorage.setItem('timeWise_modulos', JSON.stringify(modulosVistos));
+    }
+}
+
+function actualizarBarraProgreso() {
+    const barraFill = document.getElementById('progress-bar-fill');
+    const textoProgreso = document.getElementById('progress-text');
+    const mensajeFelicitaciones = document.getElementById('mensaje-felicitaciones');
+    
+    if (!barraFill || !textoProgreso) return; 
+
+    let modulosVistos = JSON.parse(localStorage.getItem('timeWise_modulos')) || [];
+    let totalModulos = 5;
+    let completados = modulosVistos.length;
+    if (completados > totalModulos) completados = totalModulos;
+
+    let porcentaje = Math.round((completados / totalModulos) * 100);
+    barraFill.style.width = porcentaje + '%';
+
+    // Detectar idioma actual desde localStorage o el atributo lang de la página
+    let idioma = localStorage.getItem('timeWise_idioma') || document.documentElement.lang || 'es';
+
+    if (idioma === 'en') {
+        textoProgreso.innerText = `Completed modules: ${completados} of ${totalModulos} (${porcentaje}%)`;
+        if (completados === totalModulos && mensajeFelicitaciones) {
+            mensajeFelicitaciones.innerText = "🎉 Congratulations! You have completed all modules and achieved full time management balance!";
+            mensajeFelicitaciones.style.display = "block";
+        }
+    } else {
+        textoProgreso.innerText = `Módulos completados: ${completados} de ${totalModulos} (${porcentaje}%)`;
+        if (completados === totalModulos && mensajeFelicitaciones) {
+            mensajeFelicitaciones.innerText = "🎉 ¡Felicitaciones! Has completado todos los módulos y alcanzado el balance total en tu gestión del tiempo.";
+            mensajeFelicitaciones.style.display = "block";
+        }
+    }
+
+    // Desbloquear insignias
+    const badges = document.querySelectorAll('.badges-wrapper span');
+    if (badges.length >= 3) {
+        if (completados >= 1) activarBadge(badges[0]);
+        if (completados >= 3) activarBadge(badges[1]);
+        if (completados >= 5) activarBadge(badges[2]);
+    }
+}
+
+function activarBadge(elemento) {
+    if (elemento) {
+        elemento.style.background = '#ecc94b';
+        elemento.style.color = '#744210';
+    }
+}
+
+function reiniciarProgreso() {
+    localStorage.removeItem('timeWise_modulos');
+    location.reload();
+}
+
+// 🌐 Conexión segura con tus funciones de idioma existentes sin bloquear clics
+const cambiarIdiomaOriginal = window.cambiarIdioma;
+if (typeof cambiarIdiomaOriginal === 'function') {
+    window.cambiarIdioma = function(idioma) {
+        localStorage.setItem('timeWise_idioma', idioma);
+        cambiarIdiomaOriginal(idioma);
+        setTimeout(actualizarBarraProgreso, 50);
+    };
+}
+
+const cambiarIdiomaPersOriginal = window.cambiarIdiomaPersonalizado;
+if (typeof cambiarIdiomaPersOriginal === 'function') {
+    window.cambiarIdiomaPersonalizado = function(idioma) {
+        localStorage.setItem('timeWise_idioma', idioma);
+        cambiarIdiomaPersOriginal(idioma);
+        setTimeout(actualizarBarraProgreso, 50);
+    };
+}
+
+// Ejecutar al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    actualizarBarraProgreso();
+});
